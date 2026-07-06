@@ -1,1 +1,7 @@
 @use '../../foundation/_mixin' as *;
+
+.c-img--logo {
+  width: 310px;
+  height: 65px;
+  object-fit: cover;
+}

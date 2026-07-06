@@ -1,1 +1,9 @@
 @use '../../foundation/_mixin' as *;
+
+.p-headerMenu__wrap {
+  display: flex;
+}
+
+.p-headerMenu__nav {
+  display: flex;
+}
