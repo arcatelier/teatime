@@ -1,1 +1,6 @@
 @use '../../foundation/_mixin' as *;
+
+.c-link {
+  color: inherit;
+  text-decoration: none;
+}
