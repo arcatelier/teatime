@@ -1,9 +1,25 @@
 @use '../../foundation/_mixin' as *;
 
 .c-text--headerList {
-  color: #4B2413;
-
   &:hover {
     opacity: 0.5;
   }
+}
+
+.c-text--verticalLeft {
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.c-text--verticalRight {
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
 }
