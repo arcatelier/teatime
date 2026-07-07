@@ -1,1 +1,9 @@
 @use '../../foundation/_mixin' as *;
+
+.c-btn--onlineShop {
+  font-family: "Libre Bodoni", serif;
+  background-color: #fed848;
+  border-radius: 50%;
+  padding: 8px 16px;
+  border: 1px solid #4b2413;
+}

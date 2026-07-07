@@ -2,7 +2,7 @@
 // Foundation
 // ==========================================================================*/
 body {
-  background-color: #F5F3F9;
+  background-color: #e2dbef;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #e2dbef;
 }
 
 /*// ==========================================================================
@@ -28,6 +29,14 @@ body {
 /*// -----------------------------------------------------------------
 // Component
 // -----------------------------------------------------------------*/
+.c-btn--onlineShop {
+  font-family: "Libre Bodoni", serif;
+  background-color: #fed848;
+  border-radius: 50%;
+  padding: 8px 16px;
+  border: 1px solid #4b2413;
+}
+
 .c-img--logo {
   width: 310px;
   height: 65px;
@@ -43,17 +52,37 @@ body {
 .c-text--headerList {
   color: #4B2413;
 }
+.c-text--headerList:hover {
+  opacity: 0.5;
+}
 
 /*// -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------*/
 .p-headerMenu__wrap {
   display: flex;
+  gap: 16px;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .p-headerMenu__wrap {
+    display: none;
+  }
 }
 
 .p-headerMenu__nav {
   display: flex;
   gap: 16px;
+}
+
+.p-hero {
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../../../assets/img/hero.png);
+  width: 90%;
+  min-height: 100vh;
 }
 
 /*// -----------------------------------------------------------------

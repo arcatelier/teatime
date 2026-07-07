@@ -2,4 +2,8 @@
 
 .c-text--headerList {
   color: #4B2413;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
