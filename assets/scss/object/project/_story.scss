@@ -1,0 +1,16 @@
+@use '../../foundation/_mixin' as *;
+
+.p-story {
+  padding: 100px 0;
+}
+
+.p-story--row {
+  padding: 0 48px;
+  margin-bottom: 110px;
+  display: flex;
+}
+
+.p-story--left {
+  display: flex;
+  flex-direction: column;
+}

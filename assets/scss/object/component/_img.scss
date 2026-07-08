@@ -1,5 +1,9 @@
 @use '../../foundation/_mixin' as *;
 
+.c-img {
+  object-fit: contain;
+}
+
 .c-img--logo {
   width: 310px;
   height: 65px;
@@ -10,6 +14,10 @@
   position: absolute;
   bottom: 15%;
   left: -50px;
-  object-fit: contain;
   width: 380px;
+}
+
+.c-img--table {
+  max-width: 270px;
+  max-height: 270px;
 }
