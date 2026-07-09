@@ -4,13 +4,17 @@
   padding: 100px 0;
 }
 
-.p-story--row {
+.p-story__row {
   padding: 0 48px;
   margin-bottom: 110px;
   display: flex;
 }
 
-.p-story--left {
+.p-story__left {
   display: flex;
   flex-direction: column;
+}
+
+.p-story__right {
+  width: 63%;
 }
