@@ -8,13 +8,26 @@
   padding: 0 48px;
   margin-bottom: 110px;
   display: flex;
+  justify-content: center;
 }
 
 .p-story__left {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
 }
 
 .p-story__right {
   width: 63%;
+  padding-top: 180px;
+}
+
+.p-story__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.p-story__container {
+  padding: 0 40px;
 }

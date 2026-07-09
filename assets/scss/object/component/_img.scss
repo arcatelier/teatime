@@ -18,13 +18,15 @@
 }
 
 .c-img--table {
-  max-width: 270px;
-  max-height: 270px;
+  width: 25vw;
+  height: auto;
 }
 
 .c-img--teaSweets {
-  max-width: 700px;
   width: 100%;
-  min-height: 570px;
-  padding-top: 180px;
+  height: auto;
+}
+
+.c-img--visual {
+  width: 850px;
 }
