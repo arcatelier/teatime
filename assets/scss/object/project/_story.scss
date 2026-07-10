@@ -1,7 +1,7 @@
 @use '../../foundation/_mixin' as *;
 
 .p-story {
-  padding: 100px 0;
+  padding: 100px 0 184px;
 }
 
 .p-story__content--primary {
@@ -39,4 +39,13 @@
 
 .p-story__right--secondary {
   width: 46%;
+}
+
+.p-story__left--secondary {
+  padding: 180px 120px 0 0;
+  flex: 1;
+}
+
+.p-story__imageBox {
+  position: relative;
 }
