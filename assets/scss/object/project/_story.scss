@@ -4,7 +4,7 @@
   padding: 100px 0;
 }
 
-.p-story__row {
+.p-story__content--primary {
   padding: 0 48px;
   margin-bottom: 110px;
   display: flex;
@@ -30,4 +30,13 @@
 
 .p-story__container {
   padding: 0 40px;
+}
+
+.p-story__content--secondary {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.p-story__right--secondary {
+  width: 46%;
 }
