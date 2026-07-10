@@ -12,7 +12,8 @@ body {
   font-style: normal;
 }
 
-.l-header {
+.l-header,
+.c-text--subTitle {
   font-family: "Libre Bodoni", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -92,6 +93,16 @@ body {
   width: 85%;
 }
 
+.c-img--cake {
+  width: 60%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 568px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .c-link {
   color: inherit;
   text-decoration: none;
@@ -125,14 +136,32 @@ body {
 }
 
 .c-text--lead {
-  width: 432px;
+  width: 460px;
+}
+
+.c-text--subTitle {
+  font-size: 40px;
 }
 
 /*// -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------*/
 .p-cake {
-  padding: 184px;
+  padding: 184px 0;
+}
+
+.p-cake__container {
+  padding: 0 40px;
+  position: relative;
+}
+
+.p-cake__title {
+  padding-top: 72px;
+}
+
+.p-cake__sectionTitle {
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .p-headerMenu__wrap {
