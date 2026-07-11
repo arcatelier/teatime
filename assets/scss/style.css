@@ -13,7 +13,8 @@ body {
 }
 
 .l-header,
-.c-text--subTitle {
+.c-text--subTitle,
+.c-text--mainTitle {
   font-family: "Libre Bodoni", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -103,6 +104,13 @@ body {
      object-fit: cover;
 }
 
+.c-img--teaGraceCake {
+  width: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .c-link {
   color: inherit;
   text-decoration: none;
@@ -143,25 +151,101 @@ body {
   font-size: 40px;
 }
 
+.c-text--mainTitle {
+  font-size: 114px;
+  line-height: 1;
+}
+
+.c-text--contents {
+  line-height: 2;
+  font-weight: 500;
+}
+
+.c-text--category {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.c-text--products {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.c-text--productContents {
+  text-align: start;
+  line-height: 2;
+}
+
+.c-text--price {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.c-text--inTax {
+  font-size: 12px;
+}
+
 /*// -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------*/
-.p-cake {
-  padding: 184px 0;
+.p-products {
+  padding-top: 184px;
 }
 
-.p-cake__container {
+.p-products__container {
   padding: 0 40px;
   position: relative;
 }
 
-.p-cake__title {
-  padding-top: 72px;
+.p-products__lead {
+  margin-bottom: 152px;
 }
 
-.p-cake__sectionTitle {
+.p-products__titleWrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.p-products__title {
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.p-products__sectionTitle {
   display: flex;
   margin-bottom: 40px;
+}
+
+.p-products__item {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 96px;
+}
+
+.p-products__wrap {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.p-products__textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-products__price {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .p-headerMenu__wrap {
@@ -255,4 +339,12 @@ body {
 
 .u-mg--100 {
   margin: 0 0 100px 100px;
+}
+
+.u-mg--8 {
+  margin: 20px 0 8px;
+}
+
+.u-mt--24 {
+  margin-top: 24px;
 }/*# sourceMappingURL=style.css.map */
