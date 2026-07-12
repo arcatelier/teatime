@@ -20,6 +20,10 @@
   z-index: 2;
 }
 
+.p-products__description {
+  width: 36%;
+}
+
 .p-products__title {
   margin-bottom: 64px;
   position: relative;
@@ -37,22 +41,28 @@
   margin-bottom: 96px;
 }
 
-.p-products__wrap {
+.p-products__card {
   width: 50%;
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-.p-products__textContainer {
+.p-products__body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.p-products__price {
+.p-products__footer {
   margin-top: 24px;
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.p-products__wrap {
+  margin: 0 auto;
+  width: 48%;
+  position: relative;
 }

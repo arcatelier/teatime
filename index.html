@@ -31,7 +31,7 @@
   </header>
   <main class="l-main">
     <div class="p-hero">
-      <img class="c-img--dot" src="assets/img/2.png" alt="黄色のドット模様">
+      <img class="c-img--dotHero" src="assets/img/2.png" alt="黄色のドット模様">
       <p class="c-text--verticalLeft">Tea's Aroma, A Touch of Happiness.</p>
       <p class="c-text--verticalRight">Tea's Aroma, A Touch of Happiness.</p>
     </div>
@@ -122,7 +122,7 @@
               </p>
             </h3>
           </div>
-          <div class="p-products__contents">
+          <div class="p-products__description">
             <p class="c-text c-text--contents">
               紅茶の香りがふんわり広がるケーキ生地に、<br>
               シロップをたっぷりと染み込ませ、<br>
@@ -133,24 +133,24 @@
           <img class="c-img c-img--cake" src="assets/img/紅茶とケーキ.png" alt="ケーキ">
         </div>
         <div class="p-products__item"> <!-- 紅茶ケーキ商品 -->
-          <div class="p-products__wrap">
+          <div class="p-products__card">
             <img class="c-img c-img--teaGraceCake" src="assets/img/アールグレイ.png" alt="アールグレイ">
-            <div class="p-products__textContainer">
+            <div class="p-products__body">
               <p class="c-text c-text--category u-mg--8">ティーグレイスケーキ</p>
               <h4 class="c-text c-text--products">{アールグレイ}</h4>
               <p class="c-text c-text--productContents u-mt--24">
                 風味豊かなアールグレイ茶葉を生地に贅沢に練り込み、中央にベルガモットのシロップをたっぷり染み込ませました。
                 外はふんわり、中はしっとり。ひと口ごとに紅茶の芳醇な香りと柑橘系の華やかな香りが広がります。
               </p>
-              <div class="p-products__price">
+              <div class="p-products__footer">
                 <p class="c-text c-text--price">3個入 1,080円<span class="c-text c-text--inTax">(税込)</span></p>
                 <button class="c-btn c-btn--onlineShop">Online Shop</button>
               </div>
             </div>
           </div>
-          <div class="p-products__wrap">
+          <div class="p-products__card">
             <img class="c-img c-img--teaGraceCake" src="assets/img/チャイ.png" alt="アールグレイ">
-            <div class="p-products__textContainer">
+            <div class="p-products__body">
               <p class="c-text c-text--category u-mg--8">ティーグレイスケーキ</p>
               <h4 class="c-text c-text--products">{チャイ}</h4>
               <p class="c-text c-text--productContents u-mt--24">
@@ -158,7 +158,7 @@
                 中央には濃厚なミルクフレーバーのシロップをたっぷり染み込ませ、ひと口ごとに紅茶の深い香り、
                 スパイスの余韻、優しいミルクの甘みが広がります。
               </p>
-              <div class="p-products__price">
+              <div class="p-products__footer">
                 <p class="c-text c-text--price">3個入 1,080円<span class="c-text c-text--inTax">(税込)</span></p>
                 <button class="c-btn c-btn--onlineShop">Online Shop</button>
               </div>
@@ -166,23 +166,23 @@
           </div>
         </div>
         <div class="p-products__item"> <!-- 紅茶ケーキ商品 -->
-          <div class="p-products__wrap">
+          <div class="p-products__card">
             <img class="c-img c-img--teaGraceCake" src="assets/img/two-package.png" alt="アールグレイ">
-            <div class="p-products__textContainer">
+            <div class="p-products__body">
               <p class="c-text c-text--category u-mg--8">ティーグレイスケーキ</p>
               <h4 class="c-text c-text--products">2種セット<br>{アールグレイ/チャイ}</h4>
-              <div class="p-products__price">
+              <div class="p-products__footer">
                 <p class="c-text c-text--price">6個入 2,322円<span class="c-text c-text--inTax">(税込)</span></p>
                 <button class="c-btn c-btn--onlineShop">Online Shop</button>
               </div>
             </div>
           </div>
-          <div class="p-products__wrap">
+          <div class="p-products__card">
             <img class="c-img c-img--teaGraceCake" src="assets/img/two-package.png" alt="アールグレイ">
-            <div class="p-products__textContainer">
+            <div class="p-products__body">
               <p class="c-text c-text--category u-mg--8">ティーグレイスケーキ</p>
               <h4 class="c-text c-text--products">２種詰合わせ<br>{アールグレイ/チャイ}</h4>
-              <div class="p-products__price">
+              <div class="p-products__footer">
                 <p class="c-text c-text--price">10個入 3,456円<span class="c-text c-text--inTax">(税込)</span></p>
                 <button class="c-btn c-btn--onlineShop">Online Shop</button>
               </div>
@@ -191,28 +191,42 @@
         </div>
       </div>
     </section>
-    <section class="p-products">
+    <section class="p-products"> <!-- 紅茶クッキー -->
       <div class="p-products__container">
-        <h3 class="p-products__title">
-          <p>
-            <span class="c-text c-text--mainTitle">T</span>
-            <span class="c-text c-text--mainTitle">e</span>
-            <span class="c-text c-text--mainTitle">a </span>
-            <span class="c-text c-text--mainTitle">D</Data></span>
-            <span class="c-text c-text--mainTitle">r</span>
-            <span class="c-text c-text--mainTitle">o</span>
-            <span class="c-text c-text--mainTitle">p</span>
-          </p>
-          <p>
-            <span class="c-text c-text--mainTitle">C</span>
-            <span class="c-text c-text--mainTitle">o</span>
-            <span class="c-text c-text--mainTitle">o</span>
-            <span class="c-text c-text--mainTitle">k</span>
-            <span class="c-text c-text--mainTitle">i</span>
-            <span class="c-text c-text--mainTitle">e</span>
-            <span class="c-text c-text--mainTitle">i</span>
-          </p>
-        </h3>
+        <div class="p-products__lead">
+          <h3 class="p-products__title">
+            <p>
+              <span class="c-text c-text--mainTitle">T</span>
+              <span class="c-text c-text--mainTitle">e</span>
+              <span class="c-text c-text--mainTitle">a </span>
+              <span class="c-text c-text--mainTitle">D</Data></span>
+              <span class="c-text c-text--mainTitle">r</span>
+              <span class="c-text c-text--mainTitle">o</span>
+              <span class="c-text c-text--mainTitle">p</span>
+            </p>
+            <p>
+              <span class="c-text c-text--mainTitle">C</span>
+              <span class="c-text c-text--mainTitle">o</span>
+              <span class="c-text c-text--mainTitle">o</span>
+              <span class="c-text c-text--mainTitle">k</span>
+              <span class="c-text c-text--mainTitle">i</span>
+              <span class="c-text c-text--mainTitle">e</span>
+              <span class="c-text c-text--mainTitle">.</span>
+            </p>
+          </h3>
+          <div class="p-products__description">
+            <p class="c-text c-text--contents">
+              紅茶専門店TEAGROVE(ティーグローヴ)のアールグレイ茶葉を使用した、<br>
+              香りを楽しむティークッキー。、<br>
+              爽やかな香りが特長で、ひと口かじると、<br>
+              華やかな余韻がふわっと口に広がります。
+            </p>
+          </div>
+          <img class="c-img c-img--cake" src="assets/img/teacookie.png" alt="紅茶クッキー">
+        </div>
+        <div class="p-products__wrap">
+          <img class="c-img c-img--dot" src="assets/img/3.png" alt="ドット">
+        </div>
       </div>
     </section>
   </main>
