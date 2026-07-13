@@ -72,10 +72,15 @@
 
 .p-products__wrap {
   margin: 0 auto;
-  width: 48%;
+  width: 55%;
   position: relative;
+  padding: 0 30px;
 }
 
 .p-products__wrap .p-products__card {
   width: 100%;
+}
+
+.p-products__imageContainer {
+  position: relative;
 }

@@ -104,7 +104,7 @@ body {
      object-fit: cover;
 }
 
-.c-img--teaGraceCake {
+.c-img--products {
   width: 100%;
   aspect-ratio: 3/2;
   -o-object-fit: cover;
@@ -196,6 +196,25 @@ body {
   font-size: 12px;
 }
 
+.c-text--productsLeft,
+.c-text--productsRight {
+  font-size: clamp(17px, 1.5vw, 25px);
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  white-space: nowrap;
+}
+
+.c-text--productsLeft {
+  left: -30px;
+  transform: translateY(-50%);
+}
+
+.c-text--productsRight {
+  right: -30px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
 /*// -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------*/
@@ -270,12 +289,17 @@ body {
 
 .p-products__wrap {
   margin: 0 auto;
-  width: 48%;
+  width: 55%;
   position: relative;
+  padding: 0 30px;
 }
 
 .p-products__wrap .p-products__card {
   width: 100%;
+}
+
+.p-products__imageContainer {
+  position: relative;
 }
 
 .p-headerMenu__wrap {
