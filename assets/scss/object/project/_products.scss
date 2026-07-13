@@ -1,7 +1,7 @@
 @use '../../foundation/_mixin' as *;
 
 .p-products {
-  padding-top: 184px;
+  padding: 184px 0;
 }
 
 .p-products__container {
@@ -9,7 +9,12 @@
   position: relative;
 }
 
+.p-story + .p-products .p-products__lead {
+  padding-top: 0;
+}
+
 .p-products__lead {
+  padding-top: 72px;
   margin-bottom: 152px;
 }
 
@@ -39,6 +44,10 @@
   display: flex;
   gap : 50px;
   margin-bottom: 96px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .p-products__card {
@@ -65,4 +74,8 @@
   margin: 0 auto;
   width: 48%;
   position: relative;
+}
+
+.p-products__wrap .p-products__card {
+  width: 100%;
 }

@@ -111,6 +111,14 @@ body {
      object-fit: cover;
 }
 
+.c-img--dot {
+  width: 327px;
+  position: absolute;
+  top: 60px;
+  left: -230px;
+  z-index: -1;
+}
+
 .c-link {
   color: inherit;
   text-decoration: none;
@@ -192,7 +200,7 @@ body {
 // Project
 // -----------------------------------------------------------------*/
 .p-products {
-  padding-top: 184px;
+  padding: 184px 0;
 }
 
 .p-products__container {
@@ -200,7 +208,12 @@ body {
   position: relative;
 }
 
+.p-story + .p-products .p-products__lead {
+  padding-top: 0;
+}
+
 .p-products__lead {
+  padding-top: 72px;
   margin-bottom: 152px;
 }
 
@@ -231,6 +244,9 @@ body {
   gap: 50px;
   margin-bottom: 96px;
 }
+.p-products__item:last-child {
+  margin-bottom: 0;
+}
 
 .p-products__card {
   width: 50%;
@@ -256,6 +272,10 @@ body {
   margin: 0 auto;
   width: 48%;
   position: relative;
+}
+
+.p-products__wrap .p-products__card {
+  width: 100%;
 }
 
 .p-headerMenu__wrap {
