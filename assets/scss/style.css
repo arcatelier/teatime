@@ -119,6 +119,10 @@ body {
   z-index: -1;
 }
 
+.c-img--wrapping {
+  width: 100%;
+}
+
 .c-link {
   color: inherit;
   text-decoration: none;
@@ -213,6 +217,13 @@ body {
 .c-text--productsRight {
   right: -30px;
   transform: translateY(-50%) rotate(180deg);
+}
+
+.c-text--decoration {
+  font-size: 14px;
+  position: absolute;
+  top: 200px;
+  right: -220px;
 }
 
 /*// -----------------------------------------------------------------
