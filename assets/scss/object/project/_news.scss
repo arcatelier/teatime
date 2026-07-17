@@ -1,0 +1,32 @@
+@use '../../foundation/_mixin' as *;
+
+.p-news {
+  padding: 240px 0 80px;
+}
+
+.p-news__container {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.p-news__column {
+  display: flex;
+}
+
+.p-news__title {
+  margin-right: 40px;
+  font-size: 48px;
+  width: 16%;
+}
+
+.p-news__topics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: 1;
+}
+
+.p-news__card {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}

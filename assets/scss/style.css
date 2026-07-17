@@ -14,7 +14,9 @@ body {
 
 .l-header,
 .c-text--subTitle,
-.c-text--mainTitle {
+.c-text--mainTitle,
+.p-news__title,
+.c-text--newsDate {
   font-family: "Libre Bodoni", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -123,6 +125,14 @@ body {
   width: 100%;
 }
 
+.c-img--news {
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  background-color: #e2dbef;
+}
+
 .c-link {
   color: inherit;
   text-decoration: none;
@@ -224,6 +234,15 @@ body {
   position: absolute;
   top: 200px;
   right: -220px;
+}
+
+.c-text--newsTitle {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.c-text--newsDate {
+  font-size: 12px;
 }
 
 /*// -----------------------------------------------------------------
@@ -391,6 +410,37 @@ body {
   position: relative;
 }
 
+.p-news {
+  padding: 240px 0 80px;
+}
+
+.p-news__container {
+  width: 100%;
+  padding: 0 40px;
+}
+
+.p-news__column {
+  display: flex;
+}
+
+.p-news__title {
+  margin-right: 40px;
+  font-size: 48px;
+  width: 16%;
+}
+
+.p-news__topics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: 1;
+}
+
+.p-news__card {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
 /*// -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------*/
@@ -412,4 +462,8 @@ body {
 
 .u-mt--24 {
   margin-top: 24px;
+}
+
+.u-mb--24 {
+  margin-bottom: 24px;
 }/*# sourceMappingURL=style.css.map */

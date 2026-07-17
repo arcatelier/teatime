@@ -69,3 +69,10 @@
 .c-img--wrapping {
   width: 100%;
 }
+
+.c-img--news {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100%;
+  background-color: #e2dbef;
+}
