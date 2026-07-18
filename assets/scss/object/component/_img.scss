@@ -76,3 +76,17 @@
   width: 100%;
   background-color: #e2dbef;
 }
+
+.c-img--dotStore {
+  width: 327px;
+  position: absolute;
+  left: -84px;
+  top: 106px;
+  z-index: -1;
+}
+
+.c-img--store {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 55%;
+}

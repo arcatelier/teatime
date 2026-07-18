@@ -1,0 +1,42 @@
+@use '../../foundation/_mixin' as *;
+
+.p-store {
+  padding: 80px 40px 160px;
+  width: 100%;
+}
+
+.p-store__container {
+  position: relative;
+}
+
+.p-store__title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.p-store__column {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+}
+
+.p-store__information {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.p-store__detail {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.p-store__row {
+  display: flex;
+  margin-top: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
