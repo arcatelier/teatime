@@ -180,9 +180,18 @@ body {
   text-decoration: none;
 }
 
+.c-link--header,
+.c-link--arrow,
+.c-link--footerMenu,
+.c-link--footer,
+.c-link--onlineShop {
+  transition: opacity 0.5s ease;
+}
 .c-link--header:hover,
+.c-link--arrow:hover,
 .c-link--footerMenu:hover,
-.c-link--footer:hover {
+.c-link--footer:hover,
+.c-link--onlineShop:hover {
   opacity: 0.5;
 }
 
