@@ -8,6 +8,12 @@
   width: 310px;
   height: 65px;
   object-fit: cover;
+
+  @include sp {
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+  }
 }
 
 .c-img--dotHero {
@@ -15,6 +21,11 @@
   bottom: 15%;
   left: -50px;
   width: 380px;
+
+  @include sp {
+    top: 20%;
+    width: 220px;
+  }
 }
 
 .c-img--table {
@@ -29,7 +40,7 @@
 }
 
 .c-img--visual {
-  width: 850px;
+  width: 100%;
 }
 
 .c-img--hand {

@@ -16,3 +16,9 @@
     opacity: 0.5;
   }
 }
+
+.c-link--onlineShop.spHeader {
+  @include sp {
+    writing-mode: vertical-rl;
+  }
+}

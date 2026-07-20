@@ -24,7 +24,7 @@
 }
 
 .c-text--lead {
-  width: 460px;
+  width: 50%;
 }
 
 .c-text--subTitle {
@@ -92,6 +92,10 @@
   position: absolute;
   top: 200px;
   right: -220px;
+
+  @include sp {
+    display: none;
+  }
 }
 
 .c-text--newsTitle {

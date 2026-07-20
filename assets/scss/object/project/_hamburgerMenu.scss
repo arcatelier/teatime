@@ -1,0 +1,22 @@
+@use '../../foundation/_mixin' as *;
+
+.p-hamburgerMenu {
+  display: none;
+
+  @include sp {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 16px;
+    width: 32px;
+  }
+}
+
+.p-hamburgerMenu__body {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background-image: url(../image/紅茶とケーキ.png);
+  background-size: cover;
+  filter: blur(20px);
+}

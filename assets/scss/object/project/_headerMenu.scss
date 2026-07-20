@@ -15,3 +15,10 @@
   gap: 16px;
 }
 
+.p-headerMenu__column {
+  display: none;
+
+  @include sp {
+    display: flex;
+  }
+}

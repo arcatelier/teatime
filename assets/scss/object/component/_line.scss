@@ -1,0 +1,9 @@
+@use '../../foundation/_mixin' as *;
+
+.c-line {
+  border: 1px solid #4B2413;
+}
+
+.c-line.under {
+  width: 60%;
+}
