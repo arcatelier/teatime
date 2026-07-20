@@ -5,7 +5,9 @@
   text-decoration: none;
 }
 
-.c-link--header {
+.c-link--header,
+.c-link--footerMenu,
+.c-link--footer {
   &:hover {
     opacity: 0.5;
   }

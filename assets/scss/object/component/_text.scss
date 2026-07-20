@@ -117,3 +117,23 @@
 .c-text--sectionValue {
   text-align: start;
 }
+
+.c-text--footerLeft,
+.c-text--footerRight {
+  font-size: 15px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.c-text--footerLeft {
+  left: 10px;
+}
+
+.c-text--footerRight {
+  right: 10px;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+}

@@ -1,1 +1,29 @@
 @use '../../foundation/_mixin' as *;
+
+.p-footerMenu__container {
+  padding: 20px 0 60px;
+  margin: 0 auto;
+  width: 960px;
+  background-color: #ded0f4;
+  border: 8px double #9a8c87;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.p-footerMenu__navWrap {
+  margin-bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-footerMenu__nav {
+  display: flex;
+  gap: 25px;
+}
+
+.p-footerMenu__item {
+  font-size: 22px;
+}

@@ -1,0 +1,21 @@
+@use '../../foundation/_mixin' as *;
+
+.p-footerBottom {
+  margin: 60px auto 0;
+  width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-footerBottom__logo {
+  font-size: 25px;
+}
+
+.p-footerBottom__meta {
+  text-align: right;
+}
+
+.p-footerBottom__navWrap {
+  margin-bottom: 20px;
+}
