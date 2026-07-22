@@ -31,3 +31,13 @@
 .u-mb--8 {
   margin-bottom: 8px;
 }
+
+.u-mb--40 {
+  @include sp {
+    margin-bottom: 40px;
+  }
+}
+
+.u-margin--auto {
+  margin: 0 0 60px auto;
+}

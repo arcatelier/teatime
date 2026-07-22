@@ -12,6 +12,10 @@
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
+
+  @include sp {
+    display: none;
+  }
 }
 
 .c-text--verticalRight {
@@ -21,6 +25,18 @@
   top: 50%;
   right: 10px;
   transform: translateY(-50%) rotate(180deg);
+
+  @include sp {
+    display: none;
+  }
+}
+
+.c-text--story {
+  @include sp {
+    padding: 32px;
+    line-height: 2;
+    font-weight: 700;
+  }
 }
 
 .c-text--lead {

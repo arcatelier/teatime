@@ -31,12 +31,22 @@
 .c-img--table {
   width: 25vw;
   height: auto;
+
+  @include sp {
+    width: 40%;
+  }
 }
 
 .c-img--teaSweets,
 .c-img--package {
   width: 100%;
   height: auto;
+}
+
+.c-img--teaSweets {
+  @include sp {
+    width: 82%;
+  }
 }
 
 .c-img--visual {

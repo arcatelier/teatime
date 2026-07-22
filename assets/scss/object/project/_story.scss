@@ -9,6 +9,19 @@
   margin-bottom: 110px;
   display: flex;
   justify-content: center;
+
+  @include sp {
+    display: none;
+  }
+}
+
+.p-story__content--primarySp {
+  display: none;
+
+  @include sp {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .p-story__left {
