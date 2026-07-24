@@ -46,22 +46,44 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include sp {
+    margin-bottom: 40px;
+    padding: 0 24px;
+  }
 }
 
 .p-story__content--secondary {
   display: flex;
   flex-direction: row-reverse;
+
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 .p-story__right--secondary {
   width: 46%;
+
+  @include sp {
+    width: 82%;
+    margin:0 0 60px auto ;
+  }
 }
 
 .p-story__left--secondary {
   padding: 180px 120px 0 0;
   flex: 1;
+
+  @include sp {
+    padding: 0;
+  }
 }
 
 .p-story__imageBox {
   position: relative;
+
+  @include sp {
+    margin-bottom: 60px;
+  }
 }

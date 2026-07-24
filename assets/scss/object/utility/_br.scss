@@ -1,0 +1,17 @@
+@use '../../foundation/_mixin' as *;
+
+.u-pc {
+  display: inline;
+
+  @include sp {
+    display: none;
+  }
+}
+
+.u-sp {
+  display: none;
+
+  @include sp {
+    display: inline;
+  }
+}

@@ -16,9 +16,5 @@
 }
 
 .p-headerMenu__column {
-  display: none;
-
-  @include sp {
-    display: flex;
-  }
+  display: flex;
 }

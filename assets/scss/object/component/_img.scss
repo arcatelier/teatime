@@ -53,15 +53,31 @@
   width: 100%;
 }
 
+.c-img--visual.sp {
+  @include sp {
+    order: 1;
+  }
+}
+
 .c-img--hand {
   width: 38%;
   position: absolute;
   right: 0;
   top: -120px;
+
+  @include sp {
+    top: -100px;
+    right: 24px;
+    width: 40%;
+  }
 }
 
 .c-img--dish {
   width: 85%;
+
+  @include sp {
+    width: 76%;
+  }
 }
 
 .c-img--cake {

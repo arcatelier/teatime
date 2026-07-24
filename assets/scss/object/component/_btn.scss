@@ -20,6 +20,14 @@
   }
 }
 
+.c-btn--onlineShop.sp {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}
+
 .c-btn--slideArrow {
   border: none;
   background-color: #e2dbef;

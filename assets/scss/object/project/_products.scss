@@ -2,11 +2,19 @@
 
 .p-products {
   padding: 184px 0;
+
+  @include sp {
+    padding: 144px 0 160px;
+  }
 }
 
 .p-products__container {
   padding: 0 40px;
   position: relative;
+
+  @include sp {
+    padding: 0 16px;
+  }
 }
 
 .p-story + .p-products .p-products__lead {
@@ -35,9 +43,18 @@
   z-index: 2;
 }
 
+.p-products__title p {
+  font-size: 0;
+}
+
 .p-products__sectionTitle {
   display: flex;
   margin-bottom: 40px;
+
+  @include sp {
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
 }
 
 .p-products__item {

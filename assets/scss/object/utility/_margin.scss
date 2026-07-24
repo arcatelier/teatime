@@ -6,10 +6,26 @@
 
 .u-ml--50 {
   margin-left: 50%;
+
+  @include sp {
+    margin-left: 22%;
+  }
 }
 
 .u-mg--100 {
   margin: 0 0 100px 100px;
+
+  @include sp {
+    margin: 0 0 120px 0;
+  }
+}
+
+.u-ml--auto {
+  margin-left: auto;
+
+  @include sp {
+    margin-bottom: 20px;
+  }
 }
 
 .u-mg--8 {
@@ -40,4 +56,10 @@
 
 .u-margin--auto {
   margin: 0 0 60px auto;
+}
+
+.u-mb--50 {
+  @include sp {
+    margin-bottom: 50px;
+  }
 }

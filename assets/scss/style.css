@@ -74,6 +74,15 @@ body {
   }
 }
 
+.c-btn--onlineShop.sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .c-btn--onlineShop.sp {
+    display: block;
+  }
+}
+
 .c-btn--slideArrow {
   border: none;
   background-color: #e2dbef;
@@ -139,15 +148,33 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .c-img--visual.sp {
+    order: 1;
+  }
+}
+
 .c-img--hand {
   width: 38%;
   position: absolute;
   right: 0;
   top: -120px;
 }
+@media screen and (max-width: 767px) {
+  .c-img--hand {
+    top: -100px;
+    right: 24px;
+    width: 40%;
+  }
+}
 
 .c-img--dish {
   width: 85%;
+}
+@media screen and (max-width: 767px) {
+  .c-img--dish {
+    width: 76%;
+  }
 }
 
 .c-img--cake {
@@ -247,6 +274,11 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+@media screen and (max-width: 767px) {
+  .c-text {
+    font-size: 14px;
+  }
+}
 
 .c-text--verticalLeft {
   font-size: 20px;
@@ -278,7 +310,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .c-text--story {
-    padding: 32px;
+    padding-left: 32px;
     line-height: 2;
     font-weight: 700;
   }
@@ -287,14 +319,35 @@ body {
 .c-text--lead {
   width: 50%;
 }
+@media screen and (max-width: 767px) {
+  .c-text--lead {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .c-text--lead.sp {
+    order: 2;
+  }
+}
 
 .c-text--subTitle {
   font-size: 40px;
+}
+@media screen and (max-width: 767px) {
+  .c-text--subTitle {
+    font-size: 20px;
+  }
 }
 
 .c-text--mainTitle {
   font-size: 114px;
   line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .c-text--mainTitle {
+    font-size: 58px;
+  }
 }
 
 .c-text--contents {
@@ -418,10 +471,20 @@ body {
 .p-products {
   padding: 184px 0;
 }
+@media screen and (max-width: 767px) {
+  .p-products {
+    padding: 144px 0 160px;
+  }
+}
 
 .p-products__container {
   padding: 0 40px;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .p-products__container {
+    padding: 0 16px;
+  }
 }
 
 .p-story + .p-products .p-products__lead {
@@ -450,9 +513,19 @@ body {
   z-index: 2;
 }
 
+.p-products__title p {
+  font-size: 0;
+}
+
 .p-products__sectionTitle {
   display: flex;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .p-products__sectionTitle {
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
 }
 
 .p-products__item {
@@ -516,12 +589,7 @@ body {
 }
 
 .p-headerMenu__column {
-  display: none;
-}
-@media screen and (max-width: 767px) {
-  .p-headerMenu__column {
-    display: flex;
-  }
+  display: flex;
 }
 
 .p-hero {
@@ -585,23 +653,50 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (max-width: 767px) {
+  .p-story__container {
+    margin-bottom: 40px;
+    padding: 0 24px;
+  }
+}
 
 .p-story__content--secondary {
   display: flex;
   flex-direction: row-reverse;
 }
+@media screen and (max-width: 767px) {
+  .p-story__content--secondary {
+    flex-direction: column;
+  }
+}
 
 .p-story__right--secondary {
   width: 46%;
+}
+@media screen and (max-width: 767px) {
+  .p-story__right--secondary {
+    width: 82%;
+    margin: 0 0 60px auto;
+  }
 }
 
 .p-story__left--secondary {
   padding: 180px 120px 0 0;
   flex: 1;
 }
+@media screen and (max-width: 767px) {
+  .p-story__left--secondary {
+    padding: 0;
+  }
+}
 
 .p-story__imageBox {
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .p-story__imageBox {
+    margin-bottom: 60px;
+  }
 }
 
 .p-news {
@@ -763,9 +858,28 @@ body {
 .u-ml--50 {
   margin-left: 50%;
 }
+@media screen and (max-width: 767px) {
+  .u-ml--50 {
+    margin-left: 22%;
+  }
+}
 
 .u-mg--100 {
   margin: 0 0 100px 100px;
+}
+@media screen and (max-width: 767px) {
+  .u-mg--100 {
+    margin: 0 0 120px 0;
+  }
+}
+
+.u-ml--auto {
+  margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+  .u-ml--auto {
+    margin-bottom: 20px;
+  }
 }
 
 .u-mg--8 {
@@ -796,4 +910,28 @@ body {
 
 .u-margin--auto {
   margin: 0 0 60px auto;
+}
+
+@media screen and (max-width: 767px) {
+  .u-mb--50 {
+    margin-bottom: 50px;
+  }
+}
+
+.u-pc {
+  display: inline;
+}
+@media screen and (max-width: 767px) {
+  .u-pc {
+    display: none;
+  }
+}
+
+.u-sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .u-sp {
+    display: inline;
+  }
 }/*# sourceMappingURL=style.css.map */
