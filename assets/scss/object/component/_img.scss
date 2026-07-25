@@ -5,13 +5,12 @@
 }
 
 .c-img--logo {
-  width: 310px;
-  height: 65px;
+  width: 22vw;
+  height: auto;
   object-fit: cover;
 
   @include sp {
     width: 200px;
-    height: 50px;
     object-fit: contain;
   }
 }
@@ -50,7 +49,7 @@
 }
 
 .c-img--visual {
-  width: 100%;
+  width: 70%;
 }
 
 .c-img--visual.sp {
@@ -87,6 +86,11 @@
   right: 0;
   height: 568px;
   object-fit: cover;
+
+  @include sp {
+    position: static;
+    width: 100%;
+  }
 }
 
 .c-img--products {

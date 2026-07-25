@@ -31,16 +31,29 @@
   flex-direction: column;
   position: relative;
   z-index: 2;
+
+  @include sp {
+    margin-bottom: -58px;
+  }
 }
 
 .p-products__description {
   width: 36%;
+
+  @include sp {
+    width: 100%;
+  }
 }
 
 .p-products__title {
   margin-bottom: 64px;
-  position: relative;
+  position: sticky;
   z-index: 2;
+  top: 24px;
+
+  @include sp {
+    margin-bottom: 0;
+  }
 }
 
 .p-products__title p {
@@ -100,4 +113,12 @@
 
 .p-products__imageContainer {
   position: relative;
+}
+
+.p-products__content {
+  @include sp {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

@@ -28,6 +28,12 @@
   }
 }
 
+.c-btn--onlineShop.spProduce {
+  @include sp {
+    display: none;
+  }
+}
+
 .c-btn--slideArrow {
   border: none;
   background-color: #e2dbef;

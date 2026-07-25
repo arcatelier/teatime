@@ -83,6 +83,12 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .c-btn--onlineShop.spProduce {
+    display: none;
+  }
+}
+
 .c-btn--slideArrow {
   border: none;
   background-color: #e2dbef;
@@ -95,15 +101,14 @@ body {
 }
 
 .c-img--logo {
-  width: 310px;
-  height: 65px;
+  width: 22vw;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (max-width: 767px) {
   .c-img--logo {
     width: 200px;
-    height: 50px;
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -145,7 +150,7 @@ body {
 }
 
 .c-img--visual {
-  width: 100%;
+  width: 70%;
 }
 
 @media screen and (max-width: 767px) {
@@ -185,6 +190,12 @@ body {
   height: 568px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .c-img--cake {
+    position: static;
+    width: 100%;
+  }
 }
 
 .c-img--products {
@@ -247,6 +258,10 @@ body {
 .c-link {
   color: inherit;
   text-decoration: none;
+}
+
+.c-link--header {
+  white-space: nowrap;
 }
 
 .c-link--header,
@@ -502,15 +517,31 @@ body {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 767px) {
+  .p-products__titleWrap {
+    margin-bottom: -58px;
+  }
+}
 
 .p-products__description {
   width: 36%;
 }
+@media screen and (max-width: 767px) {
+  .p-products__description {
+    width: 100%;
+  }
+}
 
 .p-products__title {
   margin-bottom: 64px;
-  position: relative;
+  position: sticky;
   z-index: 2;
+  top: 24px;
+}
+@media screen and (max-width: 767px) {
+  .p-products__title {
+    margin-bottom: 0;
+  }
 }
 
 .p-products__title p {
@@ -570,6 +601,14 @@ body {
 
 .p-products__imageContainer {
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .p-products__content {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .p-headerMenu__wrap {
@@ -652,6 +691,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .p-story__container {
@@ -711,11 +751,24 @@ body {
 .p-news__column {
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .p-news__column {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .p-news__title {
   margin-right: 40px;
   font-size: 48px;
   width: 16%;
+}
+@media screen and (max-width: 767px) {
+  .p-news__title {
+    margin-right: 0;
+    font-size: 30px;
+    margin-bottom: 48px;
+  }
 }
 
 .p-news__topics {
