@@ -7,6 +7,10 @@
 .p-news__container {
   width: 100%;
   padding: 0 40px;
+
+  @include sp {
+    padding: 0 24px;
+  }
 }
 
 .p-news__column {
@@ -31,15 +35,15 @@
 }
 
 .p-news__topics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  gap: 24px;
   flex: 1;
 }
 
 .p-news__card {
-  padding: 0 24px;
   display: flex;
   flex-direction: column;
+  width: calc((100% - 48px) / 3);
 }
 
 .p-news__slideNav {
