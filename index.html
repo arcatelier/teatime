@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="assets/scss/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <link rel="stylesheet" href="assets/scss/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +24,7 @@
         <div class="c-line u-mb--8"></div>
         <div class="c-line u-mb--8"></div>
         <div class="c-line under"></div>
+      </button>
       <button class="c-btn c-btn--onlineShop sp">
         <a class="c-link c-link--onlineShop spHeader" href="#">
           Online Shop
@@ -289,11 +292,9 @@
               </p>
               <div class="p-products__footer">
                 <p class="c-text c-text--price">7個入 1,134円<span class="c-text c-text--inTax">(税込)</span></p>
-                <button class="c-btn c-btn--onlineShop">
-                  <a class="c-link c-link--onlineShop" href="#">
-                    Online Shop
-                  </a>
-                </button>
+                <a class="c-btn c-btn--onlineShop c-link c-link--onlineShop" href="#">
+                  Online Shop
+                </a>
             </div>
           </div>
           <p class="c-text c-text--decoration">
@@ -435,12 +436,8 @@
           </ul>
         </div>
         <div class="p-news__slideNav">
-          <button class="c-btn c-btn--slideArrow">
-            <a class="c-link c-link--arrow" href="#">←</a>
-          </button>
-          <button class="c-btn c-btn--slideArrow">
-            <a class="c-link c-link--arrow" href="#">→</a>
-          </button>
+          <button class="c-btn c-btn--slideArrow js-prev">←</button>
+          <button class="c-btn c-btn--slideArrow js-next">→</button>
         </div>
       </div>
     </section>
@@ -521,4 +518,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
