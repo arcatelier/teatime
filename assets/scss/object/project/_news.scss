@@ -29,9 +29,8 @@
   text-align: center;
 
   @include sp {
-    margin-right: 0;
+    margin: 0 auto 48px;
     font-size: 30px;
-    margin-bottom: 48px;
   }
 }
 
@@ -52,6 +51,11 @@
   justify-content: flex-end;
   align-items: center;
   gap: 40px;
+
+  @include sp {
+    margin: 40px auto 0;
+    justify-content: center;
+  }
 }
 
 .p-news__topics.slick-initialized .slick-slide > div {

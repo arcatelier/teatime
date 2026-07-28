@@ -124,12 +124,20 @@
   left: -84px;
   top: 106px;
   z-index: -1;
+
+  @include sp {
+    width: 188px;
+  }
 }
 
 .c-img--store {
   aspect-ratio: 3 / 2;
   object-fit: cover;
   width: 55%;
+
+  @include sp {
+    width: 100%;
+  }
 }
 
 .c-img--candle {

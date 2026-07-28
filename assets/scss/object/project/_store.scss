@@ -13,12 +13,21 @@
   font-size: 48px;
   text-align: center;
   margin-bottom: 80px;
+
+  @include sp {
+    font-size: 30px;
+    margin-bottom: 48px;
+  }
 }
 
 .p-store__column {
   display: flex;
   gap: 56px;
   align-items: center;
+
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 .p-store__information {

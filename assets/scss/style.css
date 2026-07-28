@@ -93,6 +93,10 @@ body {
   border: none;
   background-color: #e2dbef;
   font-size: 30px;
+  transition: opacity 0.5s ease;
+}
+.c-btn--slideArrow:hover {
+  opacity: 0.6;
 }
 
 .c-img {
@@ -232,12 +236,22 @@ body {
   top: 106px;
   z-index: -1;
 }
+@media screen and (max-width: 767px) {
+  .c-img--dotStore {
+    width: 188px;
+  }
+}
 
 .c-img--store {
   aspect-ratio: 3/2;
   -o-object-fit: cover;
      object-fit: cover;
   width: 55%;
+}
+@media screen and (max-width: 767px) {
+  .c-img--store {
+    width: 100%;
+  }
 }
 
 .c-img--candle {
@@ -775,9 +789,8 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-news__title {
-    margin-right: 0;
+    margin: 0 auto 48px;
     font-size: 30px;
-    margin-bottom: 48px;
   }
 }
 
@@ -799,6 +812,12 @@ body {
   align-items: center;
   gap: 40px;
 }
+@media screen and (max-width: 767px) {
+  .p-news__slideNav {
+    margin: 40px auto 0;
+    justify-content: center;
+  }
+}
 
 .p-news__topics.slick-initialized .slick-slide > div {
   height: 100%;
@@ -818,11 +837,22 @@ body {
   text-align: center;
   margin-bottom: 80px;
 }
+@media screen and (max-width: 767px) {
+  .p-store__title {
+    font-size: 30px;
+    margin-bottom: 48px;
+  }
+}
 
 .p-store__column {
   display: flex;
   gap: 56px;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .p-store__column {
+    flex-direction: column;
+  }
 }
 
 .p-store__information {
@@ -906,12 +936,17 @@ body {
 }
 
 .p-hamburgerMenu__body {
+  display: none;
   position: fixed;
   inset: 0;
   overflow: hidden;
   background-image: url(../image/紅茶とケーキ.png);
   background-size: cover;
   filter: blur(20px);
+}
+
+.p-hamburgerMenu__body.is-open {
+  display: block;
 }
 
 /*// -----------------------------------------------------------------
