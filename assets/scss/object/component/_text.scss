@@ -168,14 +168,46 @@
   top: 50%;
   transform: translateY(-50%);
   white-space: nowrap;
+
+  @include sp {
+    font-size: 8px;
+  }
 }
 
 .c-text--footerLeft {
   left: 10px;
+
+  @include sp {
+    left: 5px;
+  }
 }
 
 .c-text--footerRight {
   right: 10px;
   writing-mode: vertical-rl;
   transform: translateY(-50%) rotate(180deg);
+
+  @include sp {
+    right: 5px;
+  }
+}
+
+.c-text--logoText {
+  @include sp {
+    font-size: 12px;
+  }
+}
+
+.c-text--copyright {
+  @include sp {
+    font-size: 10px;
+  }
+}
+
+.c-text--map {
+  text-align: center;
+  width: 110px;
+  border: 1px solid #4B2413;
+  border-radius: 50%;
+  padding: 5px;
 }

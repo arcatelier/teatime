@@ -42,6 +42,10 @@
 
 .u-mg--25 {
   margin: 25px auto;
+
+  @include sp {
+    margin: 12px auto;
+  }
 }
 
 .u-mb--8 {

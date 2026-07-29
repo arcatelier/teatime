@@ -144,12 +144,24 @@
   width: 130px;
   object-fit: cover;
   padding-bottom: 20px ;
+
+  @include sp {
+    width: 70px;
+  }
 }
 
 .c-img--blank {
   width: 50px;
+
+  @include sp {
+    width: 25px;
+  }
 }
 
 .c-img--footerLogo {
   width: 200px;
+
+  @include sp {
+    width: 120px;
+  }
 }

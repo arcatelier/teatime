@@ -34,6 +34,10 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+
+  @include sp {
+    align-items: center;
+  }
 }
 
 .p-store__detail {

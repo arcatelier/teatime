@@ -10,6 +10,10 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  @include sp {
+    padding: 10px 0 30px;
+  }
 }
 
 .p-footerMenu__navWrap {
@@ -17,13 +21,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include sp {
+    margin-bottom: 36px;
+  }
 }
 
 .p-footerMenu__nav {
   display: flex;
   gap: 25px;
+
+  @include sp {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
 }
 
 .p-footerMenu__item {
   font-size: 22px;
+
+  @include sp {
+    font-size: 18px;
+  }
+}
+
+.p-footerMenu__logoWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -10,6 +10,10 @@
 
 .p-footerBottom__logo {
   font-size: 25px;
+
+  @include sp {
+    font-size: 18px;
+  }
 }
 
 .p-footerBottom__meta {
@@ -18,4 +22,9 @@
 
 .p-footerBottom__navWrap {
   margin-bottom: 20px;
+
+  @include sp {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
 }
