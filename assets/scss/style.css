@@ -605,13 +605,14 @@ body {
 
 .p-products__title {
   margin-bottom: 64px;
-  position: sticky;
+  position: relative;
   z-index: 2;
   top: 24px;
 }
 @media screen and (max-width: 767px) {
   .p-products__title {
     margin-bottom: 0;
+    position: sticky;
   }
 }
 
@@ -637,6 +638,11 @@ body {
 }
 .p-products__item:last-child {
   margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-products__item {
+    gap: 32px;
+  }
 }
 
 .p-products__card {
@@ -679,6 +685,15 @@ body {
     margin-top: 24px;
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-products__row {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    gap: 32px;
   }
 }
 
@@ -844,6 +859,8 @@ body {
   .p-news__title {
     margin: 0 auto 48px;
     font-size: 30px;
+    display: flex;
+    justify-content: center;
   }
 }
 

@@ -31,6 +31,8 @@
   @include sp {
     margin: 0 auto 48px;
     font-size: 30px;
+    display: flex;
+    justify-content: center;
   }
 }
 
