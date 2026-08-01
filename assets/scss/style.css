@@ -85,7 +85,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .c-btn--onlineShop.spProduce {
-    display: none;
+    display: inline;
+    position: static;
   }
 }
 
@@ -97,6 +98,12 @@ body {
 }
 .c-btn--slideArrow:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+  .c-btn--more {
+    color: #4B2413;
+  }
 }
 
 .c-img {
@@ -207,6 +214,11 @@ body {
   aspect-ratio: 3/2;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .c-img--products {
+    aspect-ratio: 1/1.5;
+  }
 }
 
 .c-img--dot {
@@ -421,6 +433,32 @@ body {
 .c-text--productContents {
   text-align: start;
   line-height: 2;
+}
+@media screen and (max-width: 767px) {
+  .c-text--productContents {
+    max-height: 120px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.7s ease;
+  }
+  .c-text--productContents::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    background: linear-gradient(transparent, #f8efd8);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .c-text--productContents.is-open {
+    height: 500px;
+  }
+  .c-text--productContents.is-open::after {
+    display: none;
+  }
 }
 
 .c-text--price {
@@ -642,6 +680,7 @@ body {
 @media screen and (max-width: 767px) {
   .p-products__item {
     gap: 32px;
+    display: contents;
   }
 }
 
@@ -650,6 +689,13 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-products__card {
+    width: 100%;
+    flex: 0 0 100%;
+    position: relative;
+  }
 }
 
 .p-products__body {

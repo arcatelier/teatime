@@ -93,6 +93,7 @@
   min-width: 0;
 
   @include sp {
+    width: 100%;
     flex: 0 0 100%;
     position: relative;
   }
