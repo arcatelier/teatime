@@ -436,10 +436,10 @@ body {
 }
 @media screen and (max-width: 767px) {
   .c-text--productContents {
-    max-height: 120px;
+    height: 120px;
     position: relative;
     overflow: hidden;
-    transition: max-height 0.7s ease;
+    transition: height 0.7s ease;
   }
   .c-text--productContents::after {
     content: "";
@@ -454,7 +454,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .c-text--productContents.is-open {
-    height: 500px;
+    max-height: 500px;
   }
   .c-text--productContents.is-open::after {
     display: none;

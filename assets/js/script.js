@@ -2,16 +2,32 @@
 * View moreボタンの実行処理
 */
 const moreButtons = document.querySelectorAll('.c-btn--more');
+
 moreButtons.forEach(button => {
-  button.addEventListener('click',() => {
+  button.addEventListener('click', () => {
     const text = button.previousElementSibling;
 
-    text.classList.toggle('is-open');
+    if (text.classList.contains('is-open')) {
+      // 閉じる
+      text.style.height = text.scrollHeight + 'px';
 
-    if(text.classList.contains('is-open')){
-      button.textContent = 'Close -';
-    } else {
+      requestAnimationFrame(() => {
+        text.style.height = '120px';
+      });
+
+      text.classList.remove('is-open');
       button.textContent = 'View more +';
+
+    } else {
+      // 開く
+      text.style.height = text.offsetHeight + 'px';
+
+      requestAnimationFrame(() => {
+        text.style.height = text.scrollHeight + 'px';
+      });
+
+      text.classList.add('is-open');
+      button.textContent = 'Close -';
     }
   });
 });

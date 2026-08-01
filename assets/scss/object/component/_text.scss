@@ -97,10 +97,10 @@
   line-height: 2;
 
   @include sp {
-    max-height: 120px;
+    height: 120px;
     position: relative;
     overflow: hidden;
-    transition: max-height .7s ease;
+    transition: height .7s ease;
 
     &::after {
       content: "";
@@ -118,7 +118,7 @@
 
 .c-text--productContents.is-open {
   @include sp {
-    height: 500px;
+    max-height: 500px;
 
     &::after {
       display: none;
