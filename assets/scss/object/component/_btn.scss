@@ -30,7 +30,8 @@
 
 .c-btn--onlineShop.spProduce {
   @include sp {
-    display: none;
+    display: inline;
+    position: static;
   }
 }
 
@@ -42,5 +43,11 @@
 
   &:hover {
     opacity: 0.6;
+  }
+}
+
+.c-btn--more {
+  @include sp {
+    color: #4B2413;
   }
 }

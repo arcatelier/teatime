@@ -95,6 +95,35 @@
 .c-text--productContents {
   text-align: start;
   line-height: 2;
+
+  @include sp {
+    max-height: 120px;
+    position: relative;
+    overflow: hidden;
+    transition: max-height .7s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 90px;
+      background: linear-gradient(
+        transparent,#f8efd8
+      );
+    }
+  }
+}
+
+.c-text--productContents.is-open {
+  @include sp {
+    height: 500px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .c-text--price {

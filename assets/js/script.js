@@ -1,4 +1,27 @@
-$(function () {
+/**
+* View moreボタンの実行処理
+*/
+const moreButtons = document.querySelectorAll('.c-btn--more');
+moreButtons.forEach(button => {
+  button.addEventListener('click',() => {
+    const text = button.previousElementSibling;
+
+    text.classList.toggle('is-open');
+
+    if(text.classList.contains('is-open')){
+      button.textContent = 'Close -';
+    } else {
+      button.textContent = 'View more +';
+    }
+  });
+});
+
+
+
+/**
+* Newsコンテンツのスリック実装
+*/
+function newsSlider() {
   $('.p-news__topics').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -27,4 +50,8 @@ $(function () {
   $(document).on('click','.js-next', function(){
     $('.p-news__topics').slick('slickNext');
   });
+}
+
+$(function () {
+  newsSlider();
 });
