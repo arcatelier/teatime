@@ -232,6 +232,13 @@ body {
 .c-img--wrapping {
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .c-img--wrapping {
+    -o-object-fit: cover;
+       object-fit: cover;
+    aspect-ratio: 1/1.5;
+  }
+}
 
 .c-img--news {
   aspect-ratio: 3/2;
@@ -478,15 +485,31 @@ body {
   top: 50%;
   white-space: nowrap;
 }
+@media screen and (max-width: 767px) {
+  .c-text--productsLeft,
+  .c-text--productsRight {
+    font-size: 15px;
+  }
+}
 
 .c-text--productsLeft {
   left: -30px;
   transform: translateY(-50%);
 }
+@media screen and (max-width: 767px) {
+  .c-text--productsLeft {
+    left: -10px;
+  }
+}
 
 .c-text--productsRight {
   right: -30px;
   transform: translateY(-50%) rotate(180deg);
+}
+@media screen and (max-width: 767px) {
+  .c-text--productsRight {
+    right: -10px;
+  }
 }
 
 .c-text--decoration {
@@ -717,6 +740,12 @@ body {
   position: relative;
   padding: 0 30px;
 }
+@media screen and (max-width: 767px) {
+  .p-products__wrap {
+    width: 100%;
+    padding: 0;
+  }
+}
 
 .p-products__wrap .p-products__card {
   width: 100%;
@@ -724,6 +753,11 @@ body {
 
 .p-products__imageContainer {
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .p-products__imageContainer {
+    padding: 0 16px;
+  }
 }
 
 @media screen and (max-width: 767px) {

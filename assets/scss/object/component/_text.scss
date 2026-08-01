@@ -142,16 +142,28 @@
   position: absolute;
   top: 50%;
   white-space: nowrap;
+
+  @include sp {
+    font-size: 15px;
+  }
 }
 
 .c-text--productsLeft {
   left: -30px;
   transform: translateY(-50%);
+
+  @include sp {
+    left: -10px;
+  }
 }
 
 .c-text--productsRight {
   right: -30px;
   transform: translateY(-50%) rotate(180deg);
+
+  @include sp {
+    right: -10px;
+  }
 }
 
 .c-text--decoration {

@@ -117,6 +117,11 @@
   width: 55%;
   position: relative;
   padding: 0 30px;
+
+  @include sp {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .p-products__wrap .p-products__card {
@@ -125,6 +130,10 @@
 
 .p-products__imageContainer {
   position: relative;
+
+  @include sp {
+    padding: 0 16px;
+  }
 }
 
 .p-products__content {

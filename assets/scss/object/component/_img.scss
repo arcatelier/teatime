@@ -113,6 +113,11 @@
 
 .c-img--wrapping {
   width: 100%;
+
+  @include sp {
+    object-fit: cover;
+    aspect-ratio: 1 / 1.5;
+  }
 }
 
 .c-img--news {
