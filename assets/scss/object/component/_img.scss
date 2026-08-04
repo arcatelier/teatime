@@ -159,6 +159,13 @@
   }
 }
 
+.c-img--candle.hamburgerMenu {
+  @include sp {
+    width: 50px;
+    padding-top: 10px;
+  }
+}
+
 .c-img--blank {
   width: 50px;
 

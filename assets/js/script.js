@@ -1,73 +1,96 @@
-/**
-* View moreボタンの実行処理
-*/
-const moreButtons = document.querySelectorAll('.c-btn--more');
+window.addEventListener("load", () => {
+  document.body.classList.add("is-show");
 
-moreButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const text = button.previousElementSibling;
+  /**
+   * ハンバーガーメニューコンテンツボタン制御処理
+   */
+  function changeButtonText() {
+    const openBtn = document.querySelector(".js-menu-open");
+    const closeBtn = document.querySelector(".js-menu-close");
+    const nav = document.querySelector(".js-menu-content");
 
-    if (text.classList.contains('is-open')) {
-      // 閉じる
-      text.style.height = text.scrollHeight + 'px';
+    openBtn.addEventListener("click",function(){
+      nav.classList.add("is-open");
+    });
 
-      requestAnimationFrame(() => {
-        text.style.height = '120px';
-      });
+    closeBtn.addEventListener("click",function(){
+      nav.classList.remove("is-open");
+    });
+  }
 
-      text.classList.remove('is-open');
-      button.textContent = 'View more +';
+  /**
+  * View moreボタンの実行処理
+  */
+  const moreButtons = document.querySelectorAll('.c-btn--more');
 
-    } else {
-      // 開く
-      text.style.height = text.offsetHeight + 'px';
+  moreButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const text = button.previousElementSibling;
 
-      requestAnimationFrame(() => {
+      if (text.classList.contains('is-open')) {
+        // 閉じる
         text.style.height = text.scrollHeight + 'px';
-      });
 
-      text.classList.add('is-open');
-      button.textContent = 'Close -';
-    }
-  });
-});
+        requestAnimationFrame(() => {
+          text.style.height = '120px';
+        });
 
+        text.classList.remove('is-open');
+        button.textContent = 'View more +';
 
+      } else {
+        // 開く
+        text.style.height = text.offsetHeight + 'px';
 
-/**
-* Newsコンテンツのスリック実装
-*/
-function newsSlider() {
-  $('.p-news__topics').slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    infinite: false,
-    arrows: false,
-    draggable: false,
-    swipe: true,
-    prevArrow: '.js-prev',
-    nextArrow: '.js-next',
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+        requestAnimationFrame(() => {
+          text.style.height = text.scrollHeight + 'px';
+        });
+
+        text.classList.add('is-open');
+        button.textContent = 'Close -';
       }
-    ]
+    });
   });
 
-  // 矢印ボタンにクリックイベント処理 //
-  $(document).on('click','.js-prev', function(){
-    $('.p-news__topics').slick('slickPrev');
-  });
 
-  $(document).on('click','.js-next', function(){
-    $('.p-news__topics').slick('slickNext');
-  });
-}
 
-$(function () {
-  newsSlider();
+  /**
+  * Newsコンテンツのスリック実装
+  */
+  function newsSlider() {
+    $('.p-news__topics').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: false,
+      arrows: false,
+      draggable: false,
+      swipe: true,
+      prevArrow: '.js-prev',
+      nextArrow: '.js-next',
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+    // 矢印ボタンにクリックイベント処理 //
+    $(document).on('click','.js-prev', function(){
+      $('.p-news__topics').slick('slickPrev');
+    });
+
+    $(document).on('click','.js-next', function(){
+      $('.p-news__topics').slick('slickNext');
+    });
+  }
+
+  changeButtonText();
+
+  $(function () {
+    newsSlider();
+  });
 });

@@ -51,3 +51,13 @@
     color: #4B2413;
   }
 }
+
+.c-btn--close {
+  @include sp {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 40px;
+    color: #4B2413;
+  }
+}

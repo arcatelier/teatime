@@ -252,3 +252,29 @@
   border-radius: 50%;
   padding: 5px;
 }
+
+.c-text--hamburgerLeft,
+.c-text--hamburgerRight {
+  @include sp {
+    font-size: 8px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+  }
+}
+
+.c-text--hamburgerLeft {
+  @include sp {
+    left: 40px;
+  }
+}
+
+.c-text--hamburgerRight {
+  @include sp {
+    right: 40px;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}

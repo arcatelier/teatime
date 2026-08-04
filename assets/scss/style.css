@@ -106,6 +106,16 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .c-btn--close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 40px;
+    color: #4B2413;
+  }
+}
+
 .c-img {
   -o-object-fit: contain;
      object-fit: contain;
@@ -282,6 +292,13 @@ body {
 @media screen and (max-width: 767px) {
   .c-img--candle {
     width: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .c-img--candle.hamburgerMenu {
+    width: 50px;
+    padding-top: 10px;
   }
 }
 
@@ -602,6 +619,32 @@ body {
   border: 1px solid #4B2413;
   border-radius: 50%;
   padding: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .c-text--hamburgerLeft,
+  .c-text--hamburgerRight {
+    font-size: 8px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .c-text--hamburgerLeft {
+    left: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .c-text--hamburgerRight {
+    right: 40px;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
 
 .c-line {
@@ -1133,14 +1176,36 @@ body {
   display: none;
   position: fixed;
   inset: 0;
-  overflow: hidden;
-  background-image: url(../image/紅茶とケーキ.png);
+  z-index: 999;
+}
+
+.p-hamburgerMenu__body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/紅茶とケーキ.png");
   background-size: cover;
-  filter: blur(20px);
+  background-position: center;
+  filter: blur(10px);
+  transform: scale(1.1);
+  z-index: -1;
 }
 
 .p-hamburgerMenu__body.is-open {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-hamburgerMenu__container {
+  width: 85%;
+  height: calc(100vh - 80px);
+  overflow: auto;
+  background: #ded0f4;
+  border: 8px double #9a8c87;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*// -----------------------------------------------------------------
