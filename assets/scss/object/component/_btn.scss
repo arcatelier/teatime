@@ -25,6 +25,7 @@
 
   @include sp {
     display: block;
+    position: fixed;
   }
 }
 
@@ -47,7 +48,10 @@
 }
 
 .c-btn--more {
+  display: none;
+
   @include sp {
+    display: inline;
     color: #4B2413;
   }
 }
