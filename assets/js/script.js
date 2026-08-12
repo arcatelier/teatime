@@ -52,7 +52,20 @@ window.addEventListener("load", () => {
     });
   });
 
+  /**
+  * 背景色変更の処理実装
+  */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log("色変更", entry.target.dataset.color);
 
+        document.body.style.backgroundColor = entry.target.dataset.color;
+      }
+    });
+    }, {
+      threshold: 0.5
+  });
 
   /**
   * Newsコンテンツのスリック実装

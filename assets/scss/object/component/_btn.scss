@@ -15,7 +15,7 @@
     top: 15%;
     right: 10px;
     transform: none;
-    padding: 8px;
+    padding: 16px 8px;
     z-index: 1;
   }
 }
@@ -38,7 +38,7 @@
 
 .c-btn--slideArrow {
   border: none;
-  background-color: #e2dbef;
+  background-color: none;
   font-size: 30px;
   transition: opacity 0.5s ease;
 
