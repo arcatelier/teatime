@@ -55,17 +55,24 @@ window.addEventListener("load", () => {
   /**
   * 背景色変更の処理実装
   */
+  console.log("背景色変更JSが実行された");
+  const sections = document.querySelectorAll("[data-color]");
+  console.log("対象セクション数:", sections.length);
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log("色変更", entry.target.dataset.color);
+      console.log("Observer発火:", entry.isIntersecting);
+      console.log("色:", entry.target.dataset.color);
 
-        document.body.style.backgroundColor = entry.target.dataset.color;
+      if(entry.isIntersecting) {
+        document.body.style.backgroundColor =
+          entry.target.dataset.color;
       }
     });
-    }, {
-      threshold: 0.5
+  }, {
+    threshold: 0.1
   });
+  sections.forEach(section => observer.observe(section));
 
   /**
   * Newsコンテンツのスリック実装

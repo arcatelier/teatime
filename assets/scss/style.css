@@ -472,15 +472,8 @@ body {
     position: relative;
     overflow: hidden;
     transition: height 0.7s ease;
-  }
-  .c-text--productContents::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 90px;
-    background: linear-gradient(transparent, #f8efd8);
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
   }
 }
 
