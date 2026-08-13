@@ -39,10 +39,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #F5F3F9;
+  position: relative;
+  z-index: 10;
 }
 @media screen and (max-width: 767px) {
   .l-header {
-    padding: 30px 16px 0;
+    padding: 0 16px;
     justify-content: center;
   }
 }
@@ -135,6 +138,8 @@ body {
 @media screen and (max-width: 767px) {
   .c-img--logo {
     width: 200px;
+    z-index: 20;
+    transform: translateY(25px);
     -o-object-fit: contain;
        object-fit: contain;
   }
@@ -383,7 +388,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .c-text--verticalLeft {
-    display: none;
+    font-size: 15px;
   }
 }
 
@@ -397,7 +402,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .c-text--verticalRight {
-    display: none;
+    font-size: 15px;
   }
 }
 
@@ -847,9 +852,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/hero.png);
-  width: 100%;
+  width: calc(100% - 50px);
   min-height: 100vh;
   position: relative;
+  transition: width 0.6s ease;
+}
+
+.p-hero.is-expanded {
+  width: 100%;
 }
 
 .p-story {

@@ -2,6 +2,18 @@ window.addEventListener("load", () => {
   document.body.classList.add("is-show");
 
   /**
+   * Hero拡大処理
+   */
+  const hero = document.querySelector(".p-hero");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      hero.classList.add("is-expanded");
+    } else {
+      hero.classList.remove("is-expanded");
+    }
+  });
+
+  /**
    * ハンバーガーメニューコンテンツボタン制御処理
    */
   function changeButtonText() {

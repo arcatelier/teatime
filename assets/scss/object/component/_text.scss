@@ -18,7 +18,7 @@
   transform: translateY(-50%);
 
   @include sp {
-    display: none;
+    font-size: 15px;
   }
 }
 
@@ -31,7 +31,7 @@
   transform: translateY(-50%) rotate(180deg);
 
   @include sp {
-    display: none;
+    font-size: 15px;
   }
 }
 

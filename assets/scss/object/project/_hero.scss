@@ -7,7 +7,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/hero.png);
-  width: 100%;
+  width: calc(100% - 50px);
   min-height: 100vh;
   position: relative;
+  transition: width 0.6s ease;
+}
+
+.p-hero.is-expanded {
+  width: 100%;
 }

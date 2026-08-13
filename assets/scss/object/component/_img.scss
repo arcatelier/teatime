@@ -11,6 +11,8 @@
 
   @include sp {
     width: 200px;
+    z-index: 20;
+    transform: translateY(25px);
     object-fit: contain;
   }
 }

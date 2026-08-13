@@ -5,9 +5,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #F5F3F9;
+  position: relative;
+  z-index: 10;
 
   @include sp {
-    padding: 30px 16px 0;
+    padding: 0 16px;
     justify-content: center;
   }
 }
