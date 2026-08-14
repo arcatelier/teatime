@@ -2,15 +2,26 @@ window.addEventListener("load", () => {
   document.body.classList.add("is-show");
 
   /**
-   * Hero拡大処理
+   * Heroのアニメーション処理
    */
   const hero = document.querySelector(".p-hero");
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    const scrollY = window.scrollY;
+
+    // Hero拡大
+    if (scrollY > 50) {
       hero.classList.add("is-expanded");
     } else {
       hero.classList.remove("is-expanded");
     }
+
+    // フェード
+    const fadeStart = 200;
+    const fadeEnd = 600;
+
+    let opacity = (scrollY - fadeStart) / (fadeEnd - fadeStart);
+    opacity = Math.max(0, Math.min(1, opacity));
+    hero.style.setProperty("--hero-fade", opacity);
   });
 
   /**
