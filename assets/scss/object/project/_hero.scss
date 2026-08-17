@@ -13,6 +13,7 @@
   position: sticky;
   top: 0;
   transition: width 0.6s ease;
+  z-index: 1;
 }
 
 .p-hero.is-expanded {
@@ -35,4 +36,40 @@
 .p-heroWrap {
   height: 180vh;
   position: relative;
+}
+
+.p-heroWrap .c-text--verticalLeft {
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  @include sp {
+    font-size: 15px;
+  }
+}
+
+.p-heroWrap .c-text--verticalRight {
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+
+  @include sp {
+    font-size: 15px;
+  }
+}
+
+.p-heroText {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+  height: 100vh;
+  margin-bottom: -100vh;
 }

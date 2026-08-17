@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
    * Heroのアニメーション処理
    */
   const hero = document.querySelector(".p-hero");
+  const heroText = document.querySelector(".p-heroText");
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
@@ -22,6 +23,7 @@ window.addEventListener("load", () => {
     let opacity = (scrollY - fadeStart) / (fadeEnd - fadeStart);
     opacity = Math.max(0, Math.min(1, opacity));
     hero.style.setProperty("--hero-fade", opacity);
+    heroText.style.opacity = 1 - opacity;
   });
 
   /**
@@ -88,8 +90,15 @@ window.addEventListener("load", () => {
       console.log("色:", entry.target.dataset.color);
 
       if(entry.isIntersecting) {
+
+        // 背景色変更
         document.body.style.backgroundColor =
           entry.target.dataset.color;
+
+        // Storyを表示
+        if (entry.target.classList.contains("p-story")){
+          entry.target.classList.add("is-visible");
+        }
       }
     });
   }, {

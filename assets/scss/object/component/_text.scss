@@ -9,32 +9,6 @@
   }
 }
 
-.c-text--verticalLeft {
-  font-size: 20px;
-  writing-mode: vertical-rl;
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-
-  @include sp {
-    font-size: 15px;
-  }
-}
-
-.c-text--verticalRight {
-  font-size: 20px;
-  writing-mode: vertical-rl;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%) rotate(180deg);
-
-  @include sp {
-    font-size: 15px;
-  }
-}
-
 .c-text--story {
   @include sp {
     padding-left: 32px;

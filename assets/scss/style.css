@@ -181,7 +181,7 @@ body {
 }
 
 .c-img--visual {
-  width: 70%;
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -375,34 +375,6 @@ body {
 @media screen and (max-width: 767px) {
   .c-text {
     font-size: 14px;
-  }
-}
-
-.c-text--verticalLeft {
-  font-size: 20px;
-  writing-mode: vertical-rl;
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-}
-@media screen and (max-width: 767px) {
-  .c-text--verticalLeft {
-    font-size: 15px;
-  }
-}
-
-.c-text--verticalRight {
-  font-size: 20px;
-  writing-mode: vertical-rl;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%) rotate(180deg);
-}
-@media screen and (max-width: 767px) {
-  .c-text--verticalRight {
-    font-size: 15px;
   }
 }
 
@@ -858,6 +830,7 @@ body {
   position: sticky;
   top: 0;
   transition: width 0.6s ease;
+  z-index: 1;
 }
 
 .p-hero.is-expanded {
@@ -880,6 +853,44 @@ body {
 .p-heroWrap {
   height: 180vh;
   position: relative;
+}
+
+.p-heroWrap .c-text--verticalLeft {
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 767px) {
+  .p-heroWrap .c-text--verticalLeft {
+    font-size: 15px;
+  }
+}
+
+.p-heroWrap .c-text--verticalRight {
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+}
+@media screen and (max-width: 767px) {
+  .p-heroWrap .c-text--verticalRight {
+    font-size: 15px;
+  }
+}
+
+.p-heroText {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+  height: 100vh;
+  margin-bottom: -100vh;
 }
 
 .p-story {
@@ -1026,7 +1037,8 @@ body {
 }
 
 .p-news__topics {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
 }
 
 .p-news__card {
@@ -1052,6 +1064,18 @@ body {
 
 .p-news__topics.slick-initialized .slick-slide > div {
   height: 100%;
+}
+
+.p-news__topics .slick-slide {
+  padding-right: 20px;
+}
+.p-news__topics .slick-slide:last-child {
+  padding-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-news__topics .slick-slide {
+    padding: 0;
+  }
 }
 
 .p-store {

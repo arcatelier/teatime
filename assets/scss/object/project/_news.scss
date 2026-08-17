@@ -37,7 +37,8 @@
 }
 
 .p-news__topics {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
 }
 
 .p-news__card {
@@ -62,4 +63,16 @@
 
 .p-news__topics.slick-initialized .slick-slide > div {
   height: 100%;
+}
+
+.p-news__topics .slick-slide {
+  padding-right: 20px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  @include sp {
+    padding: 0;
+  }
 }
