@@ -59,9 +59,11 @@
 .c-btn--close {
   @include sp {
     position: absolute;
-    top: 5px;
-    right: 15px;
+    top: 40px;
+    right: 20px;
     font-size: 40px;
     color: #4B2413;
+    width: fit-content;
+    line-height: 0.5;
   }
 }

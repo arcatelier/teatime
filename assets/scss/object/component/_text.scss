@@ -241,13 +241,13 @@
 
 .c-text--hamburgerLeft {
   @include sp {
-    left: 40px;
+    left: 15px;
   }
 }
 
 .c-text--hamburgerRight {
   @include sp {
-    right: 40px;
+    right: 15px;
     writing-mode: vertical-rl;
     transform: translateY(-50%) rotate(180deg);
   }

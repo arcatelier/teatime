@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
-  document.body.classList.add("is-show");
+  const body = document.querySelector(".js-body");
+  body.classList.add("is-show");
 
   /**
    * Heroのアニメーション処理
@@ -38,10 +39,12 @@ window.addEventListener("load", () => {
 
     openBtn.addEventListener("click",function(){
       nav.classList.add("is-open");
+      body.classList.add("is-bg-fixed");
     });
 
     closeBtn.addEventListener("click",function(){
       nav.classList.remove("is-open");
+      body.classList.remove("is-bg-fixed");
     });
   }
 

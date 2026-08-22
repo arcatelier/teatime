@@ -1,0 +1,16 @@
+.l-body.is-bg-fixed {
+  position: relative;
+  background: url('../images/bg.jpg') center / cover no-repeat fixed;
+  position: fixed;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    pointer-events: none;
+    z-index: 20;
+  }
+}
+
