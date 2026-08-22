@@ -52,6 +52,13 @@
 
 .c-img--visual {
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transform: translateY(var(--parallax, 0px));
+
+  @include sp {
+    height: auto;
+  }
 }
 
 .c-img--visual.sp {

@@ -24,6 +24,8 @@ window.addEventListener("load", () => {
     opacity = Math.max(0, Math.min(1, opacity));
     hero.style.setProperty("--hero-fade", opacity);
     heroText.style.opacity = 1 - opacity;
+
+    parallaxImage();
   });
 
   /**
@@ -40,6 +42,20 @@ window.addEventListener("load", () => {
 
     closeBtn.addEventListener("click",function(){
       nav.classList.remove("is-open");
+    });
+  }
+
+  /**
+   * スクロールに応じて画像内容を上下させるパララックス
+   */
+  function parallaxImage(){
+    const images = document.querySelectorAll(".js-parallaxImage");
+
+    images.forEach((image) => {
+      const rect = image.getBoundingClientRect();
+      const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      const move = (scrollPercent - 0.5) * 60;
+      image.style.setProperty("--parallax", `${move}px`);
     });
   }
 
