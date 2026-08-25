@@ -7,6 +7,8 @@ window.addEventListener("load", () => {
    */
   const hero = document.querySelector(".p-hero");
   const heroText = document.querySelector(".p-heroText");
+  const story = document. querySelector(".p-story");
+
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
@@ -19,14 +21,17 @@ window.addEventListener("load", () => {
 
     // フェード
     const fadeStart = 200;
-    const fadeEnd = 600;
+    const fadeEnd = 570;
 
     let opacity = (scrollY - fadeStart) / (fadeEnd - fadeStart);
     opacity = Math.max(0, Math.min(1, opacity));
     hero.style.setProperty("--hero-fade", opacity);
     heroText.style.opacity = 1 - opacity;
 
-    parallaxImage();
+    // Heroのフェード後のp-storyセクションの表示
+    if (opacity >= 1){
+      story.classList.add("is-visible");
+    }
   });
 
   /**
@@ -47,6 +52,19 @@ window.addEventListener("load", () => {
       body.classList.remove("is-bg-fixed");
     });
   }
+
+  /**
+   * Productsタイトルの1文字ずつ表示
+   */
+  const productTitles = document.querySelectorAll(".p-products__title, .p-products__sectionTitle");
+
+  productTitles.forEach((title) => {
+    const chars = title.querySelectorAll(".c-text--subTitle, .c-text--mainTitle");
+    chars.forEach((char, index) => {
+      char.style.transitionDelay = `${index * 0.1}s`;
+    });
+  });
+
 
   /**
    * スクロールに応じて画像内容を上下させるパララックス
@@ -115,13 +133,17 @@ window.addEventListener("load", () => {
           entry.target.dataset.color;
 
         // Storyを表示
-        if (entry.target.classList.contains("p-story")){
-          entry.target.classList.add("is-visible");
+        if (entry.target.classList.contains("p-products")){
+          const titles = entry.target.querySelectorAll(".p-products__sectionTitle, .p-products__title");
+
+          titles.forEach((title) => {
+            title.classList.add("is-visible");
+          });
         }
       }
     });
   }, {
-    threshold: 0.1
+    threshold: 0.2
   });
   sections.forEach(section => observer.observe(section));
 
@@ -159,6 +181,7 @@ window.addEventListener("load", () => {
     });
   }
 
+  parallaxImage();
   changeButtonText();
 
   $(function () {

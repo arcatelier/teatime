@@ -3,8 +3,8 @@
 .p-story {
   padding: 50px 0 184px;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 2s ease, transform 2s ease;
+  transform: translateY(0);
+  transition: opacity 1.4s ease;
 }
 
 .p-story.is-visible {

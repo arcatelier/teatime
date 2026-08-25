@@ -685,7 +685,6 @@ body {
 }
 
 .p-products__lead {
-  padding-top: 72px;
   margin-bottom: 152px;
 }
 
@@ -823,6 +822,20 @@ body {
   }
 }
 
+.p-products__sectionTitle .c-text--subTitle,
+.p-products__title .c-text--mainTitle {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.p-products__sectionTitle.is-visible .c-text--subTitle,
+.p-products__title.is-visible .c-text--mainTitle {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeIn 0.8s both;
+}
+
 .p-headerMenu__wrap {
   display: flex;
   gap: 16px;
@@ -877,7 +890,7 @@ body {
 }
 
 .p-heroWrap {
-  height: 150vh;
+  height: 140vh;
   position: relative;
 }
 
@@ -922,8 +935,8 @@ body {
 .p-story {
   padding: 50px 0 184px;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 2s ease, transform 2s ease;
+  transform: translateY(0);
+  transition: opacity 1.4s ease;
 }
 
 .p-story.is-visible {

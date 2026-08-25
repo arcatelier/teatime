@@ -22,7 +22,6 @@
 }
 
 .p-products__lead {
-  padding-top: 72px;
   margin-bottom: 152px;
 }
 
@@ -151,4 +150,18 @@
     overflow-x: auto;
     gap: 32px;
   }
+}
+
+.p-products__sectionTitle .c-text--subTitle,
+.p-products__title .c-text--mainTitle {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease,transform 0.6s ease;
+}
+
+.p-products__sectionTitle.is-visible .c-text--subTitle,
+.p-products__title.is-visible .c-text--mainTitle {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeIn 0.8s both;
 }
