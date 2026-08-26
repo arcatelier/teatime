@@ -1,0 +1,12 @@
+@use '../../foundation/_mixin' as *;
+
+.p-photo {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 1.2s ease, filter 1.2s ease;
+}
+
+.p-photo.is-visible {
+  opacity: 1;
+  filter: blur(0);
+}

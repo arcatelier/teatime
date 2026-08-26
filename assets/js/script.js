@@ -65,20 +65,39 @@ window.addEventListener("load", () => {
     });
   });
 
+  /**
+   * p-photoのフェードイン処理
+   */
+  const photo = document.querySelector(".p-photo");
+  const photoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        photoObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
 
   /**
-   * スクロールに応じて画像内容を上下させるパララックス
+   * Storyコンテンツのフェードイン
    */
-  function parallaxImage(){
-    const images = document.querySelectorAll(".js-parallaxImage");
-
-    images.forEach((image) => {
-      const rect = image.getBoundingClientRect();
-      const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-      const move = (scrollPercent - 0.5) * 60;
-      image.style.setProperty("--parallax", `${move}px`);
+  const storyItems = document.querySelectorAll(".p-story img:not(.c-img--visual), .p-story .c-text");
+  const storyObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        storyObserver.unobserve(entry.target);
+      }
     });
-  }
+  }, {
+    threshold: 0.2
+  });
+
+  storyItems.forEach((item) => {
+    storyObserver.observer(item);
+  });
 
   /**
   * View moreボタンの実行処理
@@ -183,6 +202,7 @@ window.addEventListener("load", () => {
 
   parallaxImage();
   changeButtonText();
+  photoObserver.observe(photo);
 
   $(function () {
     newsSlider();
