@@ -5,9 +5,9 @@ window.addEventListener("load", () => {
   /**
    * Heroのアニメーション処理
    */
-  const hero = document.querySelector(".p-hero");
-  const heroText = document.querySelector(".p-heroText");
-  const story = document. querySelector(".p-story");
+  const hero = document.querySelector(".js-hero");
+  const heroText = document.querySelector(".js-heroText");
+  const story = document. querySelector(".js-story");
 
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
@@ -56,10 +56,10 @@ window.addEventListener("load", () => {
   /**
    * Productsタイトルの1文字ずつ表示
    */
-  const productTitles = document.querySelectorAll(".p-products__title, .p-products__sectionTitle");
+  const productTitles = document.querySelectorAll(".js-productsTitle, .js-sectionTitle");
 
   productTitles.forEach((title) => {
-    const chars = title.querySelectorAll(".c-text--subTitle, .c-text--mainTitle");
+    const chars = title.querySelectorAll(".js-subTitle, .js-mainTitle");
     chars.forEach((char, index) => {
       char.style.transitionDelay = `${index * 0.1}s`;
     });
@@ -68,7 +68,7 @@ window.addEventListener("load", () => {
   /**
    * p-photoのフェードイン処理
    */
-  const photo = document.querySelector(".p-photo");
+  const photo = document.querySelector(".js-photo");
   const photoObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -83,7 +83,7 @@ window.addEventListener("load", () => {
   /**
    * Storyコンテンツのフェードイン
    */
-  const storyItems = document.querySelectorAll(".p-story img:not(.c-img--visual), .p-story .c-text");
+  const storyItems = document.querySelectorAll(".js-storyItem");
   const storyObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if(entry.isIntersecting) {
@@ -96,7 +96,7 @@ window.addEventListener("load", () => {
   });
 
   storyItems.forEach((item) => {
-    storyObserver.observer(item);
+    storyObserver.observe(item);
   });
 
   /**
@@ -200,11 +200,7 @@ window.addEventListener("load", () => {
     });
   }
 
-  parallaxImage();
   changeButtonText();
   photoObserver.observe(photo);
-
-  $(function () {
-    newsSlider();
-  });
+  newsSlider();
 });

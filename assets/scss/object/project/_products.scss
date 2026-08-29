@@ -4,7 +4,7 @@
   padding: 184px 0;
 
   @include sp {
-    padding: 144px 0 160px;
+    padding-bottom: 160px;
   }
 }
 
@@ -165,3 +165,31 @@
   transform: translateX(0);
   animation: fadeIn 0.8s both;
 }
+
+.p-products__slider {
+  width: 100%;
+}
+
+.p-products__slide {
+  width: 100%;
+}
+
+.p-products__slide img {
+  display: block;
+  width: 100%;
+}
+
+.p-products__slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.p-products__slider .slick-dots li {
+  margin: 0;
+}
+
+.p-products__slider .slick-dots

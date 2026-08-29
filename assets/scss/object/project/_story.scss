@@ -84,7 +84,7 @@
 }
 
 .p-story__left--secondary {
-  padding: 180px 120px 0 0;
+  padding: 80px 60px 0 0;
   flex: 1;
 
   @include sp {
@@ -100,13 +100,11 @@
   }
 }
 
-.p-story img:not(.c-img--visual) {
+.js-storyItem  {
   opacity: 0;
-  transform: translate(-30px, -30px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1s ease;
 }
 
-.p-story img:not(.c-img--visual).is-visible {
+.js-storyItem.is-visible {
   opacity: 1;
-  transform: translate(0, 0);
 }
