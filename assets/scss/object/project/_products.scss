@@ -192,4 +192,17 @@
   margin: 0;
 }
 
-.p-products__slider .slick-dots
+.p-products__slider .slick-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c8c0bd;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.p-products__slider .slick-dots .slick-active button {
+  background: #5a2d1b;
+}

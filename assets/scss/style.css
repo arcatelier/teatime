@@ -669,7 +669,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-products {
-    padding: 144px 0 160px;
+    padding-bottom: 160px;
   }
 }
 
@@ -863,6 +863,21 @@ body {
 
 .p-products__slider .slick-dots li {
   margin: 0;
+}
+
+.p-products__slider .slick-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c8c0bd;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.p-products__slider .slick-dots .slick-active button {
+  background: #5a2d1b;
 }
 
 .p-headerMenu__wrap {
@@ -1068,12 +1083,12 @@ body {
   }
 }
 
-.p-story img:not(.c-img--visual.main) {
+.js-storyItem {
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-.p-story img:not(.c-img--visual.main).is-visible {
+.js-storyItem.is-visible {
   opacity: 1;
 }
 
