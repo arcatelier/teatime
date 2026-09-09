@@ -1,5 +1,10 @@
 body {
   background-color: #F5F3F9;
-  transition: background-color 0.8s ease;
+  transition: opacity 1.2s ease, background-color 0.8s ease;
   color: #4B2413;
+  opacity: 0;
+}
+
+body.is-show {
+  opacity: 1;
 }

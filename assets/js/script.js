@@ -66,6 +66,24 @@ window.addEventListener("load", () => {
   });
 
   /**
+   * Productsタイトルの表示処理
+   */
+  const productsTitleObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        productTitlesObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold:0.2
+  });
+
+  productTitles.forEach((title) => {
+    productsTitleObserver.observe(title);
+  });
+
+  /**
    * p-photoのフェードイン処理
    */
   const photo = document.querySelector(".js-photo");
@@ -136,35 +154,27 @@ window.addEventListener("load", () => {
   /**
   * 背景色変更の処理実装
   */
-  console.log("背景色変更JSが実行された");
   const sections = document.querySelectorAll("[data-color]");
-  console.log("対象セクション数:", sections.length);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      console.log("Observer発火:", entry.isIntersecting);
-      console.log("色:", entry.target.dataset.color);
+  function changeBackgroundColor() {
+    const scrollY = window.scrollY;
 
-      if(entry.isIntersecting) {
+    // トップにいる時はStoryの背景色
+    if (scrollY === 0) {
+      document.body.style.backgroundColor = "#F5F3F9"
+      return;
+    }
 
-        // 背景色変更
-        document.body.style.backgroundColor =
-          entry.target.dataset.color;
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
 
-        // Storyを表示
-        if (entry.target.classList.contains("p-products")){
-          const titles = entry.target.querySelectorAll(".p-products__sectionTitle, .p-products__title");
-
-          titles.forEach((title) => {
-            title.classList.add("is-visible");
-          });
-        }
+      if (scrollY >= sectionTop && scrollY < sectionBottom) {
+        document.body.style.backgroundColor = section.dataset.color;
       }
     });
-  }, {
-    threshold: 0.2
-  });
-  sections.forEach(section => observer.observe(section));
+  }
+  window.addEventListener("scroll", changeBackgroundColor);
 
   /**
   * Newsコンテンツのスリック実装
