@@ -4,8 +4,8 @@
   margin-bottom: 80px;
 }
 
-.u-ml--50 {
-  margin-left: 50%;
+.u-ml--sp22 {
+  margin: 0 0 20px auto;
 
   @include sp {
     margin-left: 22%;
@@ -21,7 +21,7 @@
 }
 
 .u-ml--auto {
-  margin-left: auto;
+  margin: 0 0 20px auto;
 
   @include sp {
     margin-bottom: 20px;

@@ -21,7 +21,9 @@
   width: 50%;
 
   @include sp {
-    width: 78%;
+    line-height: 2;
+    font-weight: 700;
+    align-items: end;
   }
 }
 

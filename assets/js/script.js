@@ -72,7 +72,7 @@ window.addEventListener("load", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
-        productTitlesObserver.unobserve(entry.target);
+        productsTitleObserver.unobserve(entry.target);
       }
     });
   }, {
@@ -179,8 +179,10 @@ window.addEventListener("load", () => {
   /**
   * Newsコンテンツのスリック実装
   */
-  function newsSlider() {
-    $('.p-news__topics').slick({
+  function newsSlider(){
+    const slider = $('.p-news__topics');
+
+    slider.slick({
       slidesToShow: 2,
       slidesToScroll: 1,
       infinite: false,
@@ -200,13 +202,43 @@ window.addEventListener("load", () => {
       ]
     });
 
-    // 矢印ボタンにクリックイベント処理 //
-    $(document).on('click','.js-prev', function(){
-      $('.p-news__topics').slick('slickPrev');
+    // 矢印のdisabled状態を変更する関数
+    function updateArrowState(slick, currentSlide) {
+
+      // 最初のページなら左矢印をdisabled
+      if(currentSlide === 0) {
+        $('.js-prev').addClass('slick-disabled');
+      } else {
+        $('.js-prev').removeClass('slick-disabled');
+      }
+
+      // 最後のページなら右矢印をdisabled
+      if(currentSlide >= slick.slideCount - slick.options.slidesToShow) {
+        $('.js-next').addClass('slick-disabled');
+      } else {
+        $('.js-next').removeClass('slick-disabled');
+      }
+    }
+
+    // 最初の状態
+    updateArrowState(
+      slider.slick('getSlick'),
+      slider.slick('slickCurrentSlide')
+    );
+
+    // スライドが切り替わったとき
+    slider.on('afterChange', function(event, slick, currentSlide){
+      updateArrowState(slick,currentSlide);
     });
 
-    $(document).on('click','.js-next', function(){
-      $('.p-news__topics').slick('slickNext');
+    // 左矢印
+    $(document).on('click', '.js-prev', function(){
+      slider.slick('slickPrev');
+    });
+
+    // 右矢印
+    $(document).on('click', '.js-next', function(){
+      slider.slick('slickNext');
     });
   }
 
