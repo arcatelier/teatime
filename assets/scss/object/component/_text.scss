@@ -21,6 +21,7 @@
   width: 50%;
 
   @include sp {
+    width: 78%;
     line-height: 2;
     font-weight: 700;
     align-items: end;
@@ -93,13 +94,9 @@
 }
 
 .c-text--productContents.is-open {
-  @include sp {
-    max-height: 500px;
-
-    &::after {
-      display: none;
-    }
-  }
+  max-width: none;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .c-text--price {

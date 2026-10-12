@@ -133,10 +133,16 @@
 }
 
 .c-img--news {
-  aspect-ratio: 3 / 2;
+  display: block;
+  height: 200px;
+  aspect-ratio: 3 / 2 ;
   object-fit: cover;
   width: 100%;
   background-color: #e2dbef;
+
+  @include sp {
+    height: 45vw;
+  }
 }
 
 .c-img--dotStore {

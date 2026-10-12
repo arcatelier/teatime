@@ -195,8 +195,11 @@ window.addEventListener("load", () => {
         {
           breakpoint: 767,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToShow: 1.2,
+            slidesToScroll: 1,
+            variableWidth: false,
+            centerMode: false,
+            infinite: false
           }
         }
       ]
