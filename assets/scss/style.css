@@ -50,7 +50,7 @@ body {
 }
 
 .l-footer {
-  padding: 160px 0 40px;
+  padding-bottom: 40px;
 }
 
 .l-header {
@@ -718,7 +718,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-products__container {
-    padding: 0 16px;
+    padding: 0 24px;
   }
 }
 
@@ -1235,7 +1235,7 @@ body {
 }
 
 .p-store {
-  padding: 80px 40px 160px;
+  padding: 80px 40px 150px;
   width: 100%;
 }
 
