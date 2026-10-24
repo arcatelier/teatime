@@ -84,24 +84,9 @@ window.addEventListener("load", () => {
   });
 
   /**
-   * p-photoのフェードイン処理
+   * Storyコンテンツ、画像のフェードイン
    */
-  const photo = document.querySelector(".js-photo");
-  const photoObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        photoObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  /**
-   * Storyコンテンツのフェードイン
-   */
-  const storyItems = document.querySelectorAll(".js-storyItem, .js-productsImg");
+  const storyItems = document.querySelectorAll(".js-storyItem, .js-productsImg, .js-photo");
   const storyObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if(entry.isIntersecting) {
