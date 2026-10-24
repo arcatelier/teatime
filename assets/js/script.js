@@ -234,6 +234,5 @@ window.addEventListener("load", () => {
   }
 
   changeButtonText();
-  photoObserver.observe(photo);
   newsSlider();
 });
