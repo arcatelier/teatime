@@ -41,7 +41,7 @@
   min-width: 0;
 
   @include sp {
-    width: 85%;
+    width: 100%;
     overflow: visible;
   }
 }
@@ -99,4 +99,9 @@
   height: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+}
+
+.p-news__imgBox {
+  margin-bottom: 24px;
+  overflow: hidden;
 }

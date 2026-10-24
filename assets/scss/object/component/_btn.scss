@@ -2,6 +2,7 @@
 
 .c-btn {
   font-family: "Libre Bodoni", serif;
+  cursor: pointer;
 }
 
 .c-btn--onlineShop {
@@ -9,24 +10,20 @@
   border-radius: 50%;
   padding: 8px 16px;
   border: 1px solid #4b2413;
-  cursor: pointer;
 
   @include sp {
     position: absolute;
     top: 10%;
     right: 10px;
     transform: none;
-    padding: 16px 8px;
     z-index: 10;
   }
 }
 
 .c-btn--onlineShop.sp {
-  display: none;
-
   @include sp {
-    display: block;
     position: fixed;
+    padding: 16px 8px;
   }
 }
 

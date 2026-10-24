@@ -22,8 +22,11 @@
   }
 }
 
-.c-link--onlineShop.spHeader {
+.c-link--onlineShop.sp {
+  display: none;
+
   @include sp {
+    display: block;
     writing-mode: vertical-rl;
     color: #4B2413;
     font-size: 13px;
