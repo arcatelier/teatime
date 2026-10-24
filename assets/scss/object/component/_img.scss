@@ -139,10 +139,15 @@
   object-fit: cover;
   width: 100%;
   background-color: #e2dbef;
+  transition: transform 1s ease;
 
   @include sp {
     height: 45vw;
   }
+}
+
+.c-img--news:hover {
+  transform: scale(1.1);
 }
 
 .c-img--dotStore {
@@ -179,17 +184,13 @@
 
 .c-img--candle.hamburgerMenu {
   @include sp {
-    width: 50px;
+    width: 70px;
     padding-top: 10px;
   }
 }
 
 .c-img--blank {
   width: 50px;
-
-  @include sp {
-    width: 25px;
-  }
 }
 
 .c-img--footerLogo {
