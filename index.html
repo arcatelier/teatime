@@ -135,7 +135,7 @@
             飲むだけでは出会えない<br class="u-sp">紅茶の魅力を味わうために、<br>
             お菓子に茶葉の個性と香りを<br class="u-sp">閉じ込めました。
           </p>
-          <img class="c-img c-img--visual main sp u-mb--50" src="assets/img/フィナンシェ.png" alt="フィナンシェ">
+          <img class="c-img c-img--visual main sp js-storyItem u-mb--50" src="assets/img/フィナンシェ.png" alt="フィナンシェ">
         </div>
       </div>
       <div class="p-story__content--secondary">
@@ -208,7 +208,7 @@
                 溶け合うティーケーキ。
               </p>
             </div>
-            <img class="c-img c-img--cake" src="assets/img/tea-and-cake.png" alt="ケーキ">
+            <img class="c-img c-img--productsMain js-productsImg" src="assets/img/tea-and-cake.png" alt="ケーキ">
           </div>
         </div>
         <div class="p-products__row">
@@ -328,7 +328,7 @@
                 華やかな余韻がふわっと口に広がります。
               </p>
             </div>
-            <img class="c-img c-img--cake" src="assets/img/teacookie.png" alt="紅茶クッキー">
+            <img class="c-img c-img--productsMain js-productsImg" src="assets/img/teacookie.png" alt="紅茶クッキー">
           </div>
         </div>
         <div class="p-products__wrap">
@@ -411,7 +411,7 @@
                 口に入れた瞬間にベリーソースがとろりと溢れ出す。
               </p>
             </div>
-            <img class="c-img c-img--cake" src="assets/img/tea-chocolate-sand.png" alt="チョコレートサンド">
+            <img class="c-img c-img--productsMain js-productsImg" src="assets/img/tea-chocolate-sand.png" alt="チョコレートサンド">
           </div>
         </div>
         <div class="p-products__wrap">
@@ -530,32 +530,62 @@
       <div class="p-store__container">
         <h2 class="p-store__title">Store</h2>
         <img class="c-img c-img--dotStore" src="assets/img/2.png" alt="ドット">
-        <div class="p-store__column">
-          <img class="c-img c-img--store" src="assets/img/sweets.png" alt="ショップ">
-          <div class="p-store__information">
-            <h3 class="c-text c-text--store u-mb--24">TeaTIME.新宿店</h3>
-            <div class="p-store__detail">
-              <div class="p-store__row">
-                <dt class="c-text c-text--section">住所：</dt>
-                <dd class="c-text c-text--sectionValue">
-                  〒100-0000 東京都渋谷区⚪︎⚪︎1-1-1<br>
-                  TeaTIME.新宿店
-                </dd>
+        <div class="p-store__columnContainer">
+          <div class="p-store__column">
+            <img class="c-img c-img--store" src="assets/img/sweets.png" alt="新宿店">
+            <div class="p-store__information">
+              <h3 class="c-text c-text--store u-mb--24">TeaTIME.新宿店</h3>
+              <div class="p-store__detail">
+                <div class="p-store__row">
+                  <dt class="c-text c-text--section">住所：</dt>
+                  <dd class="c-text c-text--sectionValue">
+                    〒100-0000 東京都渋谷区⚪︎⚪︎1-1-1<br>
+                    TeaTIME.新宿店
+                  </dd>
+                </div>
+                <div class="p-store__row">
+                  <dt class="c-text c-text--section">営業時間：</dt>
+                  <dd class="c-text c-text--sectionValue">
+                    月〜土 9:00 〜 20:00 / 日・祝日 10:00 〜 20:00
+                  </dd>
+                </div>
+                <div class="p-store__row">
+                  <dt class="c-text c-text--section">電話番号：</dt>
+                  <dd class="c-text c-text--sectionValue">
+                    0120-123-456
+                  </dd>
+                </div>
               </div>
-              <div class="p-store__row">
-                <dt class="c-text c-text--section">営業時間：</dt>
-                <dd class="c-text c-text--sectionValue">
-                  月〜土 9:00 〜 20:00 / 日・祝日 10:00 〜 20:00
-                </dd>
-              </div>
-              <div class="p-store__row">
-                <dt class="c-text c-text--section">電話番号：</dt>
-                <dd class="c-text c-text--sectionValue">
-                  0120-123-456
-                </dd>
-              </div>
+              <p class="c-text c-text--map"><a class="c-link c-link--map" href="#">Map</a></p>
             </div>
-            <p class="c-text c-text--map"><a class="c-link c-link--map" href="#">Map</a></p>
+          </div>
+          <div class="p-store__column">
+            <img class="c-img c-img--store" src="assets/img/dish.jpg" alt="横浜店">
+            <div class="p-store__information">
+              <h3 class="c-text c-text--store u-mb--24">TeaTIME.横浜店</h3>
+              <div class="p-store__detail">
+                <div class="p-store__row">
+                  <dt class="c-text c-text--section">住所：</dt>
+                  <dd class="c-text c-text--sectionValue">
+                    〒100-0000 神奈川県横浜市⚪︎⚪︎1-1-1<br>
+                    TeaTIME.横浜店
+                  </dd>
+                </div>
+                <div class="p-store__row">
+                  <dt class="c-text c-text--section">営業時間：</dt>
+                  <dd class="c-text c-text--sectionValue">
+                    月〜土 9:00 〜 20:00 / 日・祝日 10:00 〜 20:00
+                  </dd>
+                </div>
+                <div class="p-store__row">
+                  <dt class="c-text c-text--section">電話番号：</dt>
+                  <dd class="c-text c-text--sectionValue">
+                    0120-123-456
+                  </dd>
+                </div>
+              </div>
+              <p class="c-text c-text--map"><a class="c-link c-link--map" href="#">Map</a></p>
+            </div>
           </div>
         </div>
       </div>

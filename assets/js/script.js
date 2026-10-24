@@ -101,12 +101,15 @@ window.addEventListener("load", () => {
   /**
    * Storyコンテンツのフェードイン
    */
-  const storyItems = document.querySelectorAll(".js-storyItem");
+  const storyItems = document.querySelectorAll(".js-storyItem, .js-productsImg");
   const storyObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if(entry.isIntersecting) {
+        // 画面内に入ったら表示
         entry.target.classList.add("is-visible");
-        storyObserver.unobserve(entry.target);
+      } else {
+        // 画面外に出たら非表示に戻す
+        entry.target.classList.remove("is-visible");
       }
     });
   }, {

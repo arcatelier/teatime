@@ -250,7 +250,7 @@ body {
   }
 }
 
-.c-img--cake {
+.c-img--productsMain {
   width: 60%;
   position: absolute;
   top: 0;
@@ -260,7 +260,7 @@ body {
      object-fit: cover;
 }
 @media screen and (max-width: 767px) {
-  .c-img--cake {
+  .c-img--productsMain {
     position: static;
     width: 100%;
   }
@@ -689,6 +689,17 @@ body {
   width: 60%;
 }
 
+.js-storyItem,
+.js-productsImg {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.js-storyItem.is-visible,
+.js-productsImg.is-visible {
+  opacity: 1;
+}
+
 /*// -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------*/
@@ -1112,15 +1123,6 @@ body {
   }
 }
 
-.js-storyItem {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.js-storyItem.is-visible {
-  opacity: 1;
-}
-
 .p-news {
   padding: 240px 0 80px;
 }
@@ -1286,6 +1288,12 @@ body {
 }
 .p-store__row:first-child {
   margin-top: 0;
+}
+
+.p-store__columnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .p-footerMenu__container {

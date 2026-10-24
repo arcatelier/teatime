@@ -99,12 +99,3 @@
     margin-bottom: 60px;
   }
 }
-
-.js-storyItem  {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.js-storyItem.is-visible {
-  opacity: 1;
-}

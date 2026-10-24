@@ -1,0 +1,10 @@
+.js-storyItem,
+.js-productsImg {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.js-storyItem.is-visible,
+.js-productsImg.is-visible {
+  opacity: 1;
+}

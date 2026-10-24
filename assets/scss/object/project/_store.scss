@@ -53,3 +53,9 @@
     margin-top: 0;
   }
 }
+
+.p-store__columnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
