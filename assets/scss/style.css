@@ -107,6 +107,7 @@ body {
   .c-btn--onlineShop.spProduce {
     display: inline;
     position: static;
+    white-space: nowrap;
   }
 }
 
@@ -718,7 +719,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-products__container {
-    padding: 0 24px;
+    padding: 0 16px;
   }
 }
 

@@ -31,6 +31,7 @@
   @include sp {
     display: inline;
     position: static;
+    white-space: nowrap;
   }
 }
 
