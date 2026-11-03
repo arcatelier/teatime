@@ -881,15 +881,33 @@ body {
 
 .p-products__slider {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+@media screen and (max-width: 767px) {
+  .p-products__slider {
+    aspect-ratio: 1/1.2;
+  }
 }
 
 .p-products__slide {
   width: 100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.p-products__slide.is-active {
+  opacity: 1;
 }
 
 .p-products__slide img {
   display: block;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-products__slider .slick-dots {

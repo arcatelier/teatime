@@ -106,6 +106,30 @@ window.addEventListener("load", () => {
   });
 
   /**
+   * スライダー処理
+  */
+  const sliders = document.querySelectorAll(".js-slider");
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".js-sliderItem");
+
+    // スライドが1枚以下なら処理しない
+    if (slides.length <= 1) return;
+    let currentIndex = 0;
+
+    //5秒ごとにスライドを切り替える
+    setInterval(() => {
+      // 現在の画像を非表示
+      slides[currentIndex].classList.remove("is-active");
+
+      // 次の画像へ
+      currentIndex = (currentIndex + 1) % slides.length;
+
+      // 次の画像を表示
+      slides[currentIndex].classList.add("is-active");
+    }, 5000);
+  });
+
+  /**
   * View moreボタンの実行処理
   */
   const moreButtons = document.querySelectorAll('.c-btn--more');
